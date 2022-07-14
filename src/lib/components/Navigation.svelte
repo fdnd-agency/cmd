@@ -23,6 +23,10 @@
 		display: none;
 	}
 
+	nav a {
+		color: var(--color-black);
+	}
+
 	nav.active {
 		position: fixed;
 		display: flex;
