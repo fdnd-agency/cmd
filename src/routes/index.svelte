@@ -17,7 +17,7 @@
 			<Seperator />
 			{#each standard.data?.chapters as chapter, i}
 				<div>
-					<p>{chapter.data?.title}</p>
+					<p>.{i + 1} {chapter.data?.title}</p>
 				</div>
 			{/each}
 		{/each}
