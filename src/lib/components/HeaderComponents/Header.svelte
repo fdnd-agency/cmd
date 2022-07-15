@@ -3,14 +3,16 @@
 </script>
 
 <header>
-	<h1>CMD Mid-term</h1>
+	<a href="/">CMD Mid-term</a>
 	<Navigation />
 </header>
 
 <style>
-	h1 {
+	a {
 		position: relative;
 		font-size: 1.5rem;
+		font-weight: bold;
+		color: var(--color-black);
 		z-index: 1;
 	}
 

@@ -2,7 +2,6 @@
 	import Hero from '$lib/components/IndexComponents/Hero.svelte';
 	import Introduction from '$lib/components/IndexComponents/Introduction.svelte';
 	import Seperator from '$lib/components/Seperator.svelte';
-	import * as helpers from '@prismicio/helpers';
 
 	export let page;
 	export let standards;
