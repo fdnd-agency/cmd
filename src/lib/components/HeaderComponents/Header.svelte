@@ -1,5 +1,5 @@
 <script>
-	import Navigation from '$lib/components/Navigation.svelte';
+	import Navigation from '$lib/components/HeaderComponents/Navigation.svelte';
 </script>
 
 <header>
