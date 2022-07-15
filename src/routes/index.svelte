@@ -1,6 +1,7 @@
 <script>
 	import Hero from '$lib/components/IndexComponents/Hero.svelte';
 	import Introduction from '$lib/components/IndexComponents/Introduction.svelte';
+	import Seperator from '$lib/components/Seperator.svelte';
 	import * as helpers from '@prismicio/helpers';
 
 	export let page;
@@ -14,6 +15,7 @@
 	<section>
 		{#each standards as standard, i}
 			<a href={standard.uid}>{i + 1}.0 {standard.data?.title}</a>
+			<Seperator />
 			{#each standard.data?.chapters as chapter, i}
 				<div>
 					<p>{chapter.data?.title}</p>
@@ -25,7 +27,7 @@
 
 <style>
 	section {
-		padding: 1rem;
+		padding: 2rem 1rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -35,6 +37,6 @@
 		color: var(--color-black);
 		font-size: 1.3rem;
 		font-weight: bold;
-		margin: 0.5rem 0;
+		margin-top: 1rem;
 	}
 </style>
