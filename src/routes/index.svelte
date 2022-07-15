@@ -1,14 +1,12 @@
 <script>
-	import * as helper from '@prismicio/helpers';
+	import * as helpers from '@prismicio/helpers';
 	export let page;
+	export let standards;
 </script>
 
 <main>
-	{JSON.stringify(page, null, 2)}
-	<!-- <section>
+	<section>
 		<h2>{page.data?.title}</h2>
+		<p>{page.data?.introduction}</p>
 	</section>
-	{#each standards as standard, i}
-    <p>{standard.data.}</p>
-  {/each} -->
 </main>
