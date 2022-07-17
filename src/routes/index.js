@@ -15,8 +15,6 @@ export async function get({ fetch }) {
 			}))
 
 			response.data.chapters = chapters
-
-			console.log(chapters)
 			
 			return response;
 		})
@@ -26,7 +24,7 @@ export async function get({ fetch }) {
 		return {
 			body: {
 				page,
-				standards
+				standards,chapters
 			}
 		};
 

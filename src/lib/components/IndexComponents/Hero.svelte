@@ -4,7 +4,6 @@
 
 <section>
 	<h2>{heroTitle}</h2>
-	
 </section>
 
 <style>
