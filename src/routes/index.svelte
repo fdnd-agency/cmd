@@ -7,7 +7,6 @@
 
 	export let page;
 	export let standards;
-	console.log(standards);
 </script>
 
 <main>
