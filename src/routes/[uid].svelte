@@ -9,20 +9,22 @@
 	console.log(standard);
 </script>
 
-<StandardHero
-	standardHeaderTitle={standard.data.title}
-	standardHeaderIntroduction={standard.data.introduction}
-/>
-{#each standard.data.chapters as chapter}
-	<ChapterSection chapterTitle={chapter.data.title}>
-		{#each chapter.data?.contentleft as contentleft}
-			<ChapterContentLeft contentLeftText={contentleft.text} contentLeftImage={contentleft.url} />
-		{/each}
-		{#each chapter.data?.contentright as contentright}
-			<ChapterContentRight
-				contentRightText={contentright.text}
-				contentRightImage={contentright.url}
-			/>
-		{/each}
-	</ChapterSection>
-{/each}
+{#if standard && Object.keys(standard).length}
+	<StandardHero
+		standardHeaderTitle={standard.data.title}
+		standardHeaderIntroduction={standard.data.introduction}
+	/>
+	{#each standard.data?.chapters as chapter}
+		<ChapterSection chapterTitle={chapter.data.title}>
+			{#each chapter.data?.contentleft as contentleft}
+				<ChapterContentLeft contentLeftText={contentleft.text} contentLeftImage={contentleft.url} />
+			{/each}
+			{#each chapter.data?.contentright as contentright}
+				<ChapterContentRight
+					contentRightText={contentright.text}
+					contentRightImage={contentright.url}
+				/>
+			{/each}
+		</ChapterSection>
+	{/each}
+{/if}
