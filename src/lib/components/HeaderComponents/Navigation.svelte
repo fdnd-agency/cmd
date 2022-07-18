@@ -37,6 +37,7 @@
 		height: 2px;
 		background-color: var(--color-black);
 		transition: width 1s cubic-bezier(0.25, 1, 0.5, 1);
+		display: none;
 	}
 
 	nav a:hover::before {
@@ -116,6 +117,10 @@
 
 		button {
 			display: none;
+		}
+
+		nav a::before {
+			display: block;
 		}
 	}
 </style>
