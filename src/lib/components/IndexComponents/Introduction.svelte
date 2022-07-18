@@ -13,12 +13,12 @@
 	section {
 		background-color: var(--color-cmd-yellow);
 		padding: 1rem;
-        display: flex;
-        flex-direction: column;
+		display: flex;
+		flex-direction: column;
 	}
 
-    img {
-        align-self: center;
-        width: 12rem;
-    }
+	img {
+		align-self: center;
+		width: 12rem;
+	}
 </style>

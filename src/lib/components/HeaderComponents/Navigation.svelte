@@ -7,10 +7,10 @@
 </script>
 
 <nav class:active={isActive}>
-	<a href="/">Beoogde leerresultaten</a>
-	<a href="/">Onderwijsleeromgeving</a>
-	<a href="/">Toetsing</a>
-	<a href="/">Gerealiseerde toetsresultaten</a>
+	<a href="/beoogde-leerresultaten">Beoogde leerresultaten</a>
+	<a href="/onderwijsleeromgeving">Onderwijsleeromgeving</a>
+	<a href="/toetsing">Toetsing</a>
+	<a href="/gerealiseerde-leerresultaten">Gerealiseerde toetsresultaten</a>
 </nav>
 <button on:click={openNavMenu} class:active={isActive}>
 	<span />
