@@ -7,16 +7,20 @@
 
 	export let page;
 	export let standards;
+	console.log(standards);
 </script>
 
 <main>
 	<Hero heroTitle={page.data.title} />
 	<Introduction introduction={page.data?.introduction} />
 	{#each standards as standard, i}
-		<StandardSection standardTitle={`${i + 1}.0 ${standard.data?.title}`}>
+		<StandardSection
+			standardUID={`/${standard?.uid}`}
+			standardTitle={`${i + 1}.0 ${standard.data?.title}`}
+		>
 			<Seperator />
 			{#each standard.data?.chapters as chapter, i}
-				<StandardChapter chapterTitle={`.${i + 1} ${chapter.data?.title}`}/>
+				<StandardChapter chapterTitle={`.${i + 1} ${chapter.data?.title}`} />
 			{/each}
 		</StandardSection>
 	{/each}

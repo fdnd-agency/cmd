@@ -24,7 +24,25 @@
 	}
 
 	nav a {
+		position: relative;
 		color: var(--color-black);
+	}
+
+	nav a::before {
+		content: '';
+		position: absolute;
+		bottom: -0.3rem;
+		right: 0;
+		width: 0;
+		height: 2px;
+		background-color: var(--color-black);
+		transition: width 1s cubic-bezier(0.25, 1, 0.5, 1);
+	}
+
+	nav a:hover::before {
+		left: 0;
+		right: auto;
+		width: 100%;
 	}
 
 	nav.active {
