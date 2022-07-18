@@ -6,17 +6,19 @@ export async function get({ fetch }) {
 
 	const standards = await Promise.all(
 		page.data.standards.map(async (s) => {
-			const response = await client.getByUID('standard', s.standard.uid);
+			const standard = await client.getByUID('standard', s.standard.uid);
 
-			const chapters = await Promise.all(response.data.chapters.map(async (s) => {
-				const response = await client.getByUID('chapter', s.chapter.uid)
+			const chapters = await Promise.all(
+				standard.data.chapters.map(async (s) => {
+					const chapter = await client.getByUID('chapter', s.chapter.uid);
 
-				return response;
-			}))
+					return chapter;
+				})
+			);
 
-			response.data.chapters = chapters
+			standard.data.chapters = chapters;
 
-			return response;
+			return standard;
 		})
 	);
 
