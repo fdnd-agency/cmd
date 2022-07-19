@@ -13,7 +13,6 @@
 		padding: 1rem;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 	}
 
 	section a {
@@ -25,5 +24,11 @@
 
 	section a:hover {
 		color: var(--color-cmd-grey);
+	}
+
+	@media (min-width: 60rem) {
+		section {
+			width: 100%;
+		}
 	}
 </style>

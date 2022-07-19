@@ -2,6 +2,10 @@
 	export let chapterTitle;
 </script>
 
-<div>
-	<p>{chapterTitle}</p>
-</div>
+<p>{chapterTitle}</p>
+
+<style>
+	p {
+		padding: 0.5rem 0;
+	}
+</style>

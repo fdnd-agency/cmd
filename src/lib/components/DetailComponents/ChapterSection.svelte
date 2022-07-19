@@ -31,4 +31,9 @@
 		border: 2px solid var(--color-black);
 		background-color: var(--color-cmd-yellow);
 	}
+
+	div {
+		display: flex;
+		flex-direction: column;
+	}
 </style>

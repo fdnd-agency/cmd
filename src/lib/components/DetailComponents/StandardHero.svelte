@@ -8,7 +8,7 @@
 
 <section>
 	<h1>{`${standardNumber}.0`} {standardHeaderTitle}</h1>
-	{@html helpers.asHTML(standardHeaderIntroduction)}
+	<div>{@html helpers.asHTML(standardHeaderIntroduction)}</div>
 </section>
 
 <style>
@@ -17,17 +17,29 @@
 			url('/assets/images/detail-hero-image.jpg');
 		background-size: cover;
 		background-position: center;
-		color: var(--color-white);
 		height: 15rem;
+		color: var(--color-white);
 		padding: 1rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		font-style: italic;
 	}
 
 	h1 {
 		color: var(--color-cmd-yellow);
 		font-style: normal;
+	}
+
+	div {
+		max-width: 50rem;
+	}
+
+	@media (min-width: 60rem) {
+		section {
+			height: 20rem;
+		}
+		h1 {
+			font-size: 2.5rem;
+		}
 	}
 </style>

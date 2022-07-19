@@ -7,8 +7,7 @@
 </section>
 
 <style>
-
-	section:first-child {
+	section {
 		background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
 			url('/assets/images/hero-image.jpg');
 		background-size: cover;
@@ -16,8 +15,22 @@
 		height: 15rem;
 		color: var(--color-white);
 		padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	h2 {
+		max-width: 45rem;
+	}
+
+	@media (min-width: 60rem) {
+		section {
+			height: 25rem;
+			padding: 0 5rem;
+		}
+		h2 {
+			font-size: 3rem;
+		}
 	}
 </style>
