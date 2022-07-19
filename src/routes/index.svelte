@@ -5,6 +5,7 @@
 	import Standard from '$lib/components/IndexComponents/Standard.svelte';
 	import StandardChapter from '$lib/components/IndexComponents/StandardChapter.svelte';
 	import PageTransition from '$lib/components/PageTransition.svelte';
+	import StandardSection from '$lib/components/IndexComponents/StandardSection.svelte';
 
 	export let page;
 	export let standards;
@@ -14,7 +15,7 @@
 	<main>
 		<Hero heroTitle={page.data.title} />
 		<Introduction introduction={page.data?.introduction} introductionTitle="Mid Term" />
-		<div>
+		<StandardSection>
 			{#each standards as standard}
 				<Standard
 					standardUID={`/${standard?.uid}`}
@@ -28,22 +29,7 @@
 					{/each}
 				</Standard>
 			{/each}
-		</div>
+		</StandardSection>
 	</main>
 </PageTransition>
 
-<style>
-	div {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-		padding: 2rem 1rem;
-	}
-
-	@media (min-width: 60rem) {
-		div {
-			flex-direction: row;
-			padding: 3rem;
-		}
-	}
-</style>

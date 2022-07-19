@@ -16,7 +16,7 @@
 <style>
 	section {
 		background-color: var(--color-cmd-yellow);
-		padding: 1rem;
+		padding: 2rem 1rem;
 		display: flex;
 		flex-direction: column;
 	}
