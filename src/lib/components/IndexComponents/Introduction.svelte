@@ -34,8 +34,9 @@
 		section {
 			flex-direction: row;
 			align-items: center;
-			justify-content: space-between;
-			padding: 3rem 5rem;
+			justify-content: center;
+			padding: 3rem 0;
+			gap: 1rem;
 		}
 
 		img {

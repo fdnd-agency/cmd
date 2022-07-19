@@ -36,7 +36,8 @@
 	div {
 		display: flex;
 		flex-direction: column;
-		padding: 2rem 0;
+		gap: 1rem;
+		padding: 2rem 1rem;
 	}
 
 	@media (min-width: 60rem) {
