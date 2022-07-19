@@ -6,7 +6,6 @@
 	import PageTransition from '$lib/components/PageTransition.svelte';
 
 	export let standard;
-
 	console.log(standard);
 </script>
 

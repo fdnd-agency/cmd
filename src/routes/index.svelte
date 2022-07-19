@@ -14,14 +14,16 @@
 	<main>
 		<Hero heroTitle={page.data.title} />
 		<Introduction introduction={page.data?.introduction} />
-		{#each standards as standard, i}
+		{#each standards as standard}
 			<StandardSection
 				standardUID={`/${standard?.uid}`}
-				standardTitle={`${i + 1}.0 ${standard.data?.title}`}
+				standardTitle={`${standard?.data.standardnumber}.0 ${standard.data?.title}`}
 			>
 				<Seperator />
 				{#each standard.data?.chapters as chapter, i}
-					<StandardChapter chapterTitle={`.${i + 1} ${chapter.data?.title}`} />
+					<StandardChapter
+						chapterTitle={`${standard?.data.standardnumber}.${i + 1} ${chapter.data?.title}`}
+					/>
 				{/each}
 			</StandardSection>
 		{/each}

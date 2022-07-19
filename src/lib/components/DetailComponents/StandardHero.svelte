@@ -12,19 +12,21 @@
 
 <style>
 	section {
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
 			url('/assets/images/detail-hero-image.jpg');
-        background-size: cover;
-        background-position: center;
-        color: var(--color-white);
-        height: 15rem;
+		background-size: cover;
+		background-position: center;
+		color: var(--color-white);
+		height: 15rem;
 		padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		font-style: italic;
 	}
 
-    h1 {
-        color: var(--color-cmd-yellow);
-    }
+	h1 {
+		color: var(--color-cmd-yellow);
+		font-style: normal;
+	}
 </style>
