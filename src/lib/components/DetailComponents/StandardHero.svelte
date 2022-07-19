@@ -41,5 +41,9 @@
 		h1 {
 			font-size: 2.5rem;
 		}
+
+		div {
+			font-size: 1.2rem;
+		}
 	}
 </style>
