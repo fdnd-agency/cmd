@@ -3,10 +3,11 @@
 
 	export let standardHeaderTitle;
 	export let standardHeaderIntroduction;
+	export let standardNumber;
 </script>
 
 <section>
-	<h1>{standardHeaderTitle}</h1>
+	<h1>{`${standardNumber}.0`} {standardHeaderTitle}</h1>
 	{@html helpers.asHTML(standardHeaderIntroduction)}
 </section>
 

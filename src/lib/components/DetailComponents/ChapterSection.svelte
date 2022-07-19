@@ -1,9 +1,10 @@
 <script>
 	export let chapterTitle;
+	export let chapterNumber;
 </script>
 
 <section class="chapter">
-	<span>1.1</span>
+	<span>{chapterNumber}</span>
 	<h2>{chapterTitle}</h2>
 	<div>
 		<slot />
@@ -16,11 +17,11 @@
 	}
 
 	section h2 {
-		padding: 0.5rem;
+		padding: 0.5rem 0;
 		margin-bottom: 1rem;
 		font-size: 1.3rem;
-		max-width: 30rem;
 		border: 2px solid var(--color-black);
+		max-width: 30rem;
 	}
 
 	section span {
@@ -29,11 +30,5 @@
 		max-width: 30rem;
 		border: 2px solid var(--color-black);
 		background-color: var(--color-cmd-yellow);
-	}
-
-	section div {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
 	}
 </style>

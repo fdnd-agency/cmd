@@ -6,7 +6,6 @@
 	import PageTransition from '$lib/components/PageTransition.svelte';
 
 	export let standard;
-	console.log(standard);
 </script>
 
 <PageTransition>
@@ -14,9 +13,13 @@
 		<StandardHero
 			standardHeaderTitle={standard.data.title}
 			standardHeaderIntroduction={standard.data.introduction}
+			standardNumber={standard.data.standardnumber}
 		/>
-		{#each standard.data?.chapters as chapter}
-			<ChapterSection chapterTitle={chapter.data.title}>
+		{#each standard.data?.chapters as chapter, i}
+			<ChapterSection
+				chapterTitle={chapter.data.title}
+				chapterNumber={`${standard?.data.standardnumber}.${i + 1}`}
+			>
 				{#each chapter.data?.contentleft as contentleft}
 					<ChapterContentLeft
 						contentLeftText={contentleft.text}
