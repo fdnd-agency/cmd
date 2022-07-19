@@ -1,24 +1,19 @@
-<script>
-	export let standardTitle;
-	export let standardUID;
-</script>
-
-<section>
-	<a href={standardUID}>{standardTitle}</a>
+<div>
 	<slot />
-</section>
+</div>
 
 <style>
-	section {
-		padding: 1rem;
+	div {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		gap: 1rem;
+		padding: 2rem 1rem;
 	}
 
-	section a {
-		color: var(--color-black);
-		font-size: 1.3rem;
-		font-weight: bold;
+	@media (min-width: 60rem) {
+		div {
+			flex-direction: row;
+			padding: 3rem 5rem;
+		}
 	}
 </style>
