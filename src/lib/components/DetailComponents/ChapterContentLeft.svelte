@@ -4,11 +4,22 @@
 	export let contentLeftAlt;
 </script>
 
-<p>{contentLeftText}</p>
-<img src={contentLeftImage} alt={contentLeftAlt} />
+<div>
+	<p>{contentLeftText}</p>
+	<img src={contentLeftImage} alt={contentLeftAlt} />
+</div>
 
 <style>
 	img {
 		max-width: 100%;
+	}
+
+	p {
+		max-width: 30rem;
+	}
+
+	div {
+		display: flex;
+		flex-direction: column;
 	}
 </style>
