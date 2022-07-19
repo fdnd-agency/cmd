@@ -37,6 +37,7 @@
 	@media (min-width: 60rem) {
 		section {
 			height: 20rem;
+			padding: 3rem 5rem;
 		}
 		h1 {
 			font-size: 2.5rem;
