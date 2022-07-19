@@ -30,7 +30,7 @@
 		max-width: 30rem;
 	}
 
-	@media (min-width: 60rem) {
+	@media (min-width: 40rem) {
 		section {
 			flex-direction: row;
 			align-items: center;
@@ -38,7 +38,9 @@
 			padding: 3rem 0;
 			gap: 1rem;
 		}
+	}
 
+	@media (min-width: 60rem) {
 		img {
 			width: 18rem;
 		}
