@@ -32,6 +32,17 @@
 		background-color: var(--color-cmd-yellow);
 	}
 
+	div {
+		display: grid;
+		grid-gap: 1rem;
+	}
+
+	@media (min-width: 45rem) {
+		section {
+			padding: 2rem 3rem;
+		}
+	}
+
 	@media (min-width: 60rem) {
 		section {
 			padding: 2rem 5rem;
@@ -40,6 +51,7 @@
 		div {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 0;
 		}
 	}
 </style>

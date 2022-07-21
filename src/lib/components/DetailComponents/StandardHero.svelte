@@ -34,6 +34,20 @@
 		max-width: 50rem;
 	}
 
+	@media (min-width: 45rem) {
+		section {
+			padding: 2rem 3rem;
+		}
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		div {
+			font-size: 1.2rem;
+		}
+	}
+
 	@media (min-width: 60rem) {
 		section {
 			height: 20rem;
@@ -41,10 +55,6 @@
 		}
 		h1 {
 			font-size: 2.5rem;
-		}
-
-		div {
-			font-size: 1.2rem;
 		}
 	}
 </style>
