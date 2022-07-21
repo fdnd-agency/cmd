@@ -1,9 +1,10 @@
 <script>
 	export let chapterTitle;
 	export let chapterNumber;
+	export let chapterUID;
 </script>
 
-<section class="chapter">
+<section class="chapter" id={chapterUID}>
 	<span>{chapterNumber}</span>
 	<h2>{chapterTitle}</h2>
 	<div>
