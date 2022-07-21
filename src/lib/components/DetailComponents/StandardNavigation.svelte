@@ -27,7 +27,7 @@
 	}
 
 	span {
-		font-size: 1.2rem;
+		font-size: 1rem;
 		font-weight: bold;
 		cursor: pointer;
 	}
@@ -54,5 +54,11 @@
 
 	nav a:hover {
 		color: var(--color-cmd-grey);
+	}
+
+	@media (min-width: 45rem) {
+		span {
+			font-size: 1.2rem;
+		}
 	}
 </style>
