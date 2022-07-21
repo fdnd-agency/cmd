@@ -5,10 +5,10 @@
 	margin: 0;
 	list-style: none;
 	text-decoration: none;
+	scroll-behavior: smooth;
 }
 
 body {
 	font-family: 'Open Sans', sans-serif;
 	box-sizing: border-box;
 }
-
