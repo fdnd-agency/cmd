@@ -1,5 +1,5 @@
 <script>
-	import ButtonSection from '$lib/components/indexComponents/ButtonSection.svelte';
+	import ButtonSection from '../../../lib/components/indexComponents/ButtonSection.svelte';
 	export let heroTitle;
 </script>
 
