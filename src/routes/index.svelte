@@ -1,11 +1,11 @@
 <script>
-	import Hero from './../lib/components/IndexComponents/Hero.svelte';
-	import Introduction from './../lib/components/IndexComponents/Introduction.svelte';
-	import Seperator from './../lib/components/Seperator.svelte';
-	import Standard from './../lib/components/IndexComponents/Standard.svelte';
-	import StandardChapter from './../lib/components/IndexComponents/StandardChapter.svelte';
-	import PageTransition from './../lib/components/PageTransition.svelte';
-	import StandardSection from './../lib/components/IndexComponents/StandardSection.svelte';
+	import Hero from '$lib/components/IndexComponents/Hero.svelte';
+	import Introduction from '$lib/components/IndexComponents/Introduction.svelte';
+	import Seperator from '$lib/components/Seperator.svelte';
+	import Standard from '$lib/components/IndexComponents/Standard.svelte';
+	import StandardChapter from '$lib/components/IndexComponents/StandardChapter.svelte';
+	import PageTransition from '$lib/components/PageTransition.svelte';
+	import StandardSection from '$lib/components/IndexComponents/StandardSection.svelte';
 
 	export let page;
 	export let standards;
