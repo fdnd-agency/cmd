@@ -8,7 +8,6 @@
 	import StandardNavigationLink from '$lib/components/DetailComponents/StandardNavigationLink.svelte';
 
 	export let standard;
-	console.log(standard);
 </script>
 
 <PageTransition>
