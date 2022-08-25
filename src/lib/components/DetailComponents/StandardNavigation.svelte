@@ -1,6 +1,6 @@
 <script>
 	export let navigationLink;
-	let isActive = true;
+	let isActive = false;
 
 	function showMenu() {
 		isActive = !isActive;
@@ -8,10 +8,20 @@
 </script>
 
 <div>
-	<span on:click={showMenu}>Menu</span>
-	<nav class:active={isActive}>
-		<slot />
-		<a href={`${navigationLink}/#`}>Back To Top</a>
+	<span on:click={showMenu}>
+		Inhoudsopgave
+		{#if isActive} 
+			<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-x" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+				<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+				<rect x="4" y="4" width="16" height="16" rx="2" />
+				<path d="M10 10l4 4m0 -4l-4 4" />
+			</svg> 
+		{/if}
+	</span>
+	<nav class:active={!isActive}>
+		<ul>
+			<slot />
+		</ul>
 	</nav>
 </div>
 
@@ -19,21 +29,30 @@
 	div {
 		background-color: var(--color-cmd-yellow);
 		position: fixed;
-		bottom: 2rem;
+		bottom: 1rem;
 		right: 1rem;
 		border-radius: 0.5rem;
-		text-align: right;
-		padding: 1rem;
+		text-align: left;
+		padding: .5rem;
+		box-shadow:0 0 3px rgba(0,0,0,.15);
+		display:flex;
+		flex-direction:column;
+		max-width:20em;
+		z-index:10
 	}
 
 	span {
-		font-size: 1rem;
+		font-size: .8rem;
 		font-weight: bold;
 		cursor: pointer;
+		padding:0 .25rem
 	}
 
-	span:hover {
-		color: var(--color-cmd-grey);
+	svg {
+		position:absolute;
+		right:.5rem;
+		top:.5rem;
+		stroke: var(--color-black);
 	}
 
 	nav {
@@ -46,19 +65,10 @@
 		display: none;
 	}
 
-	nav a {
-		font-weight: bold;
-		color: var(--color-black);
-		transition: 0.3 ease-in-out;
+	ul {
+		display:flex;
+		flex-direction: column;
+		margin-top: .25rem;
 	}
 
-	nav a:hover {
-		color: var(--color-cmd-grey);
-	}
-
-	@media (min-width: 45rem) {
-		span {
-			font-size: 1.2rem;
-		}
-	}
 </style>

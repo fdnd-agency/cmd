@@ -11,6 +11,13 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 	box-sizing: border-box;
+	max-width:60em;
+	background:var(--color-grey);
+	margin:0 auto
+}
+
+body > div {
+	background:var(--color-white);
 }
 
 

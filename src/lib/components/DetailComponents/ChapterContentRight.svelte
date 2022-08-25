@@ -20,6 +20,6 @@
 	}
 
 	p {
-		max-width: 30rem;
+		/max-width: 30rem;
 	}
 </style>

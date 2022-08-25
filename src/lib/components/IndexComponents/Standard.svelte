@@ -21,10 +21,6 @@
 		transition: 0.1s ease-in-out;
 	}
 
-	section a:hover {
-		color: var(--color-cmd-grey);
-	}
-
 	@media (min-width: 60rem) {
 		section {
 			width: 100%;

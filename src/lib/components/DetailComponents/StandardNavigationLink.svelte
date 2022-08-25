@@ -3,19 +3,29 @@
 	export let chapter;
 </script>
 
-<a href={chapterLink}>{chapter}</a>
+<li>
+	<a href={chapterLink}>{chapter}</a>
+</li>
+
 
 <style>
+	li {
+		margin-bottom: .25rem;
+		display:flex
+	}
+	
+	li:last-of-type {
+		margin-bottom: 0;
+	}
+
 	a {
 		color: var(--color-black);
-		max-width: 20rem;
+		font-size: .8rem;
+		padding:.25rem;
 	}
 
 	a:hover {
-		color: var(--color-cmd-grey);
-	}
-
-	a:first-child {
-		padding-top: 0.5rem;
+		background:var(--color-black);
+		color:var(--color-cmd-yellow);
 	}
 </style>

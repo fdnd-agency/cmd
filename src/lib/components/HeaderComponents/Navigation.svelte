@@ -1,18 +1,21 @@
 <script>
 	let isActive = false;
 
-	function openNavMenu() {
+	function toggleNavMenu() {
 		isActive = !isActive;
+	}
+	function closeNavMenu() {
+		isActive =false;
 	}
 </script>
 
 <nav class:active={isActive}>
-	<a href="/beoogde-leerresultaten">Beoogde leerresultaten</a>
-	<a href="/onderwijsleeromgeving">Onderwijsleeromgeving</a>
-	<a href="/toetsing">Toetsing</a>
-	<a href="/gerealiseerde-leerresultaten">Gerealiseerde toetsresultaten</a>
+	<a href="/beoogde-leerresultaten" on:click={closeNavMenu}>Beoogde leerresultaten</a>
+	<a href="/onderwijsleeromgeving" on:click={closeNavMenu}>Onderwijsleeromgeving</a>
+	<a href="/toetsing" on:click={closeNavMenu}>Toetsing</a>
+	<a href="/gerealiseerde-leerresultaten" on:click={closeNavMenu}>Gerealiseerde toetsresultaten</a>
 </nav>
-<button on:click={openNavMenu} class:active={isActive}>
+<button on:click={toggleNavMenu} class:active={isActive}>
 	<span />
 	<span />
 	<span />
@@ -38,6 +41,7 @@
 		background-color: var(--color-black);
 		transition: width 1s cubic-bezier(0.25, 1, 0.5, 1);
 		display: none;
+		z-index:30
 	}
 
 	nav a:hover::before {
@@ -60,6 +64,7 @@
 		height: 100vh;
 		background-color: var(--color-cmd-yellow);
 		overflow: hidden;
+		z-index:20
 	}
 
 	nav.active a {
@@ -75,6 +80,7 @@
 		position: relative;
 		z-index: 1;
 		cursor: pointer;
+		z-index:30
 	}
 
 	button span {
