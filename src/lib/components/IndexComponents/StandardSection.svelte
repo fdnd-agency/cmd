@@ -10,10 +10,10 @@
 		padding: 2rem 1rem;
 	}
 
-	@media (min-width: 60rem) {
+	@media (min-width: 45rem) {
 		div {
-			flex-direction: row;
-			padding: 3rem 5rem;
+			display:grid;
+			grid-template-columns: 1fr 1fr;
 		}
 	}
 </style>

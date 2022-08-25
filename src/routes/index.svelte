@@ -1,7 +1,6 @@
 <script>
 	import Hero from '$lib/components/IndexComponents/Hero.svelte';
 	import Introduction from '$lib/components/IndexComponents/Introduction.svelte';
-	import Seperator from '$lib/components/Seperator.svelte';
 	import Standard from '$lib/components/IndexComponents/Standard.svelte';
 	import StandardChapter from '$lib/components/IndexComponents/StandardChapter.svelte';
 	import PageTransition from '$lib/components/PageTransition.svelte';
@@ -21,10 +20,11 @@
 					standardUID={`/${standard?.uid}`}
 					standardTitle={`${standard?.data.standardnumber}.0 ${standard.data?.title}`}
 				>
-					<Seperator />
 					{#each standard.data?.chapters as chapter, i}
 						<StandardChapter
 							chapterTitle={`${standard?.data.standardnumber}.${i + 1} ${chapter.data?.title}`}
+							chapterUID={`/#${chapter?.uid}`}
+							standardUID={`/${standard?.uid}`}
 						/>
 					{/each}
 				</Standard>

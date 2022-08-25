@@ -3,7 +3,7 @@
 </script>
 
 <header>
-	<a href="/">CMD Mid-term</a>
+	<a href="/">CMD Mid Term</a>
 	<Navigation />
 </header>
 
