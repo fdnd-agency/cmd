@@ -122,6 +122,8 @@
 			justify-content: center;
 			align-items: center;
 			gap: 1rem;
+			position:relative;
+			height:auto
 		}
 
 		button {

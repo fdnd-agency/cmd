@@ -4,7 +4,7 @@
 	export let chapterTitle;
 </script>
 
-<li><a href="{standardUID}{chapterUID}" sveltekit:prefetch>{chapterTitle}</a></li>
+<li><a href="{standardUID}/#{chapterUID}" sveltekit:prefetch>{chapterTitle}</a></li>
 
 <style>
 	a {

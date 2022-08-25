@@ -1,5 +1,6 @@
 <script>
 	export let navigationLink;
+	export let standardHeaderTitle;
 	let isActive = false;
 
 	function showMenu() {
@@ -8,16 +9,16 @@
 </script>
 
 <div>
-	<span on:click={showMenu}>
-		Inhoudsopgave
+	<strong on:click={showMenu}>
+		<strong>Inhoud {standardHeaderTitle}</strong>
 		{#if isActive} 
-			<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-x" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-				<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-				<rect x="4" y="4" width="16" height="16" rx="2" />
+			<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-x" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+				
+				<rect x="4" y="4" width="16" height="16" rx="0" />
 				<path d="M10 10l4 4m0 -4l-4 4" />
 			</svg> 
 		{/if}
-	</span>
+		</strong>
 	<nav class:active={!isActive}>
 		<ul>
 			<slot />
@@ -40,18 +41,18 @@
 		z-index:10
 	}
 
-	span {
+	strong {
 		font-size: .8rem;
-		font-weight: bold;
 		cursor: pointer;
-		padding:0 .25rem
+		padding:0 .15rem
 	}
 
 	svg {
 		position:absolute;
-		right:.5rem;
-		top:.5rem;
+		right:-.25rem;
+		top:-2rem;
 		stroke: var(--color-black);
+		fill:var(--color-cmd-yellow)
 	}
 
 	nav {

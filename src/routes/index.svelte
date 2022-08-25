@@ -23,8 +23,8 @@
 					{#each standard.data?.chapters as chapter, i}
 						<StandardChapter
 							chapterTitle={`${standard?.data.standardnumber}.${i + 1} ${chapter.data?.title}`}
-							chapterUID={`/#${chapter?.uid}`}
-							standardUID={`/${standard?.uid}`}
+							chapterUID={`${chapter?.uid}`}
+							standardUID={`${standard?.uid}`}
 						/>
 					{/each}
 				</Standard>

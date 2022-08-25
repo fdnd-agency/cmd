@@ -37,7 +37,10 @@
 				{/each}
 			</ChapterSection>
 		{/each}
-		<StandardNavigation navigationLink={standard.uid}>
+		<StandardNavigation 
+			navigationLink={standard.uid}
+			standardHeaderTitle={standard.data.title}
+		>
 			{#each standard.data.chapters as chapter}
 				<StandardNavigationLink
 					chapterLink={`${standard.uid}/#${chapter?.uid}`}

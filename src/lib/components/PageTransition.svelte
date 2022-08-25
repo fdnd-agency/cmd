@@ -2,6 +2,6 @@
 	import { fly } from 'svelte/transition';
 </script>
 
-<div in:fly={{ y: -5, duration: 500, delay: 500 }} out:fly={{ y: -5, duration: 500 }}>
+<div in:fly={{ y: -5, duration: 250, delay: 100 }} out:fly={{ y: -5, duration: 250 }}>
 	<slot />
 </div>
