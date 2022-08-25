@@ -35,7 +35,7 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: center;
-			padding: 3rem 0;
+			padding: 3rem;
 			gap: 1rem;
 		}
 	}
