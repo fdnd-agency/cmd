@@ -3,13 +3,13 @@
 	export let standardHeaderTitle;
 	let isActive = false;
 
-	function showMenu() {
+	function toggleMenu() {
 		isActive = !isActive;
 	}
 </script>
 
 <div>
-	<strong on:click={showMenu}>
+	<strong on:click={toggleMenu}>
 		<strong>Inhoud {standardHeaderTitle}</strong>
 		{#if isActive} 
 			<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-x" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
