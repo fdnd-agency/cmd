@@ -5,7 +5,7 @@
 </script>
 
 <div>
-	<p>{contentLeftText}</p>
+	<p>{#if contentLeftText}{contentLeftText}{/if}</p>
 	<img src={contentLeftImage} alt={contentLeftAlt} />
 </div>
 
