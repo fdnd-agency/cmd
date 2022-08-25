@@ -10,10 +10,10 @@
 </script>
 
 <nav class:active={isActive}>
-	<a href="/beoogde-leerresultaten" on:click={closeNavMenu}>Beoogde leerresultaten</a>
-	<a href="/onderwijsleeromgeving" on:click={closeNavMenu}>Onderwijsleeromgeving</a>
-	<a href="/toetsing" on:click={closeNavMenu}>Toetsing</a>
-	<a href="/gerealiseerde-leerresultaten" on:click={closeNavMenu}>Gerealiseerde toetsresultaten</a>
+	<a href="/beoogde-leerresultaten" sveltekit:prefetch on:click={closeNavMenu}>Beoogde leerresultaten</a>
+	<a href="/onderwijsleeromgeving" sveltekit:prefetch on:click={closeNavMenu}>Onderwijsleeromgeving</a>
+	<a href="/toetsing" sveltekit:prefetch on:click={closeNavMenu}>Toetsing</a>
+	<a href="/gerealiseerde-leerresultaten" sveltekit:prefetch on:click={closeNavMenu}>Gerealiseerde toetsresultaten</a>
 </nav>
 <button on:click={toggleNavMenu} class:active={isActive}>
 	<span />
