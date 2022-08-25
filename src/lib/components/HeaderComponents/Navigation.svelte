@@ -3,9 +3,12 @@
 
 	function toggleNavMenu() {
 		isActive = !isActive;
+
+		isActive ? document.body.classList.add('freeze') : document.body.classList.remove('freeze');
 	}
 	function closeNavMenu() {
-		isActive =false;
+		isActive = false;
+		document.body.classList.remove('freeze');
 	}
 </script>
 

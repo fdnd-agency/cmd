@@ -19,5 +19,8 @@ body {
 body > div {
 	background:var(--color-white);
 }
-
+body.freeze {
+	overflow:hidden;
+	height:100%
+}
 
