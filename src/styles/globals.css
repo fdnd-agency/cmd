@@ -24,6 +24,10 @@ body.freeze {
 	height:100%
 }
 
+img {
+	max-width: 100%
+}
+
 /* richt text html */
 section div.content a {
 	color:var(--color-black);
