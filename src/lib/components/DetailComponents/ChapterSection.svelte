@@ -7,7 +7,7 @@
 <section class="chapter" id={chapterUID}>
 	<span>{chapterNumber}</span>
 	<h2>{chapterTitle}</h2>
-	<div class="chapter-content">
+	<div class="content">
 		<slot />
 	</div>
 </section>
