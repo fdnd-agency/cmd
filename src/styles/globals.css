@@ -42,12 +42,17 @@ section div.content p {
 	margin-bottom: 1rem;
 }
 
-section div.content ul {
-	list-style:disc;
+section div.content ul,
+section div.content ol {
+	list-style:initial;
 	margin:1rem 0;
 	padding-left:2rem;
 }
-section div.content ul li {
-	list-style:disc;
+
+section div.content li {
+	list-style:initial; /* why doesn't this revert to list-style-type:decimal for ol-element? */
 	margin-bottom: 1rem;
+}
+section div.content ol li {
+	list-style-type:decimal;
 }
