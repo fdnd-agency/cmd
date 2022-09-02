@@ -7,7 +7,7 @@
 <section class="chapter" id={chapterUID}>
 	<span>{chapterNumber}</span>
 	<h2>{chapterTitle}</h2>
-	<div>
+	<div class="chapter-content">
 		<slot />
 	</div>
 </section>
@@ -37,7 +37,6 @@
 	}
 
 	div {
-		/display: grid;
 		grid-gap: 2rem;
 	}
 
@@ -53,7 +52,6 @@
 		}
 
 		div {
-			/display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			grid-gap: 2rem;
 		}

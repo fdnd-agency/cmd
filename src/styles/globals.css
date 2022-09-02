@@ -24,3 +24,14 @@ body.freeze {
 	height:100%
 }
 
+/* richt text html */
+
+section div ul {
+	list-style:disc;
+	margin:1rem 0;
+	padding-left:2rem;
+}
+section div ul li {
+	list-style:disc;
+	margin-bottom: .5rem;
+}

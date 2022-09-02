@@ -1,25 +1,17 @@
 <script>
-	export let contentRightText;
-	export let contentRightImage;
-	export let contentRightAlt;
+	import * as helpers from '@prismicio/helpers';
+
+	export let contentRight;
 </script>
 
 <div>
-	<p>{#if contentRightText}{contentRightText}{/if}</p>
-	<img src={contentRightImage} alt={contentRightAlt} />
-</div>
+	{@html helpers.asHTML(contentRight)}
+</div>	
 
 <style>
-	img {
-		max-width: 70%;
-	}
-
 	div {
 		display: flex;
 		flex-direction: column;
-	}
-
-	p {
-		/max-width: 30rem;
+		margin-bottom: 1rem;
 	}
 </style>

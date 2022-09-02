@@ -23,18 +23,14 @@
 				chapterNumber={`${standard?.data.standardnumber}.${i + 1}`}
 				chapterUID={chapter?.uid}
 			>
-				{#each chapter.data?.contentleft as contentleft}
-					<ChapterContentLeft
-						contentLeftText={contentleft.text}
-						contentLeftImage={contentleft.url}
-					/>
-				{/each}
-				{#each chapter.data?.contentright as contentright}
-					<ChapterContentRight
-						contentRightText={contentright.text}
-						contentRightImage={contentright.url}
-					/>
-				{/each}
+				<ChapterContentLeft
+					contentLeft={chapter?.data.contentleft}
+				/>
+				
+				<ChapterContentRight
+					contentRight={chapter?.data.contentright}
+				/>
+				
 			</ChapterSection>
 		{/each}
 		<StandardNavigation 
