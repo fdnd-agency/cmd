@@ -4,5 +4,6 @@
 
 ### Mid Term Website
 
-Prototype
-Figma Designs
+Projectboard  
+Prototype  
+Figma Designs  
