@@ -13,7 +13,7 @@
 <PageTransition>
 	<main>
 		<Hero heroTitle={page.data.title} />
-		<Introduction introduction={page.data?.introduction} introductionTitle="Mid Term" />
+		<Introduction introduction={page.data?.introduction} introductionTitle="Midterm" />
 		<StandardSection>
 			{#each standards as standard}
 				<Standard

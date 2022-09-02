@@ -3,7 +3,7 @@
 </script>
 
 <header>
-	<a href="/" sveltekit:prefetch>CMD Mid Term</a>
+	<a href="/" sveltekit:prefetch>CMD Midterm</a>
 	<Navigation />
 </header>
 
