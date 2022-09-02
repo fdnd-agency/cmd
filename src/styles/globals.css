@@ -37,7 +37,9 @@ section div.content a:hover {
 	color:var(--color-black);
 	text-decoration:none
 }
-
+section div.content h3 {
+	font-size:1em
+}
 section div.content p {
 	margin-bottom: 1rem;
 }

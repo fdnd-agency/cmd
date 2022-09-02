@@ -42,7 +42,7 @@
 
 	@media (min-width: 45rem) {
 		section {
-			padding: 2rem 3rem;
+			padding: 1rem 3rem;
 		}
 	}
 

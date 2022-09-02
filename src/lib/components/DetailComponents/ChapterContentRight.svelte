@@ -4,9 +4,11 @@
 	export let contentRight;
 </script>
 
+{#if contentRight.length > 0}
 <div>
 	{@html helpers.asHTML(contentRight)}
-</div>	
+</div>
+{/if}	
 
 <style>
 	div {
