@@ -7,3 +7,9 @@
 [Ontwerp pdf](https://github.com/fdnd-agency/cmd/blob/main-mid-term/docs/design/CMDAgency_ontwerp.pdf)  
 [Adobe XD Designs](https://github.com/fdnd-agency/cmd/blob/main-mid-term/docs/design/CMDAgency_ontwerp.xd.zip)  
 [Content](https://github.com/fdnd-agency/cmd/tree/main/docs/content)
+
+## Licentie
+
+![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
+
+This work is licensed under [GNU GPLv3](./LICENSE).
