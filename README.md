@@ -1,8 +1,6 @@
-# CMD
+# CMD 
 
-## CMD Projecten
-
-### Mid Term Website
+## Mid Term Website
 
 Projectboard  
 Prototype  
