@@ -6,9 +6,9 @@
 </script>
 
 <section>
-	<div>
+	<div class="content">
 		<h2>{introductionTitle}</h2>
-		<p>{@html helpers.asHTML(introduction)}</p>
+		{@html helpers.asHTML(introduction)}
 	</div>
 	<img src="/assets/images/cmd-laptop.png" alt="Laptop" />
 </section>
@@ -24,10 +24,6 @@
 	img {
 		align-self: center;
 		width: 12rem;
-	}
-
-	p {
-		max-width: 30rem;
 	}
 
 	@media (min-width: 40rem) {

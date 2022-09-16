@@ -28,7 +28,7 @@
 	@media (min-width: 60rem) {
 		section {
 			height: 25rem;
-			padding: 0 5rem;
+			padding: 0 3rem;
 		}
 		h2 {
 			font-size: 3rem;
