@@ -1,11 +1,9 @@
 <script>
-	import ButtonSection from '$lib/components/IndexComponents/ButtonSection.svelte';
 	export let heroTitle;
 </script>
 
 <section>
 	<h2>{heroTitle}</h2>
-	<ButtonSection />
 </section>
 
 <style>
