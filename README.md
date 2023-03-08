@@ -12,7 +12,7 @@
 ## Platform Grote Thema's
 
 [Projectboard](...)  
-[Codebase (main-bog-themes branch)](...)  
+[Codebase (main-big-themes branch)](...)  
 [Ontwerp pdf](...)  
 [Styleguide](...)  
 [Content](...)
