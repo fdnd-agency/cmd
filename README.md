@@ -13,7 +13,7 @@
 
 [Projectboard](...)  
 [Codebase (main-big-themes branch)](...)  
-[Ontwerp pdf](...)  
+[Ontwerp figma]([...](https://www.figma.com/file/OnK231WnQysdldulabxIzx/Hva-themas-en-werkvormen?node-id=0-1&t=bMT23uB5dewCuEws-0))  
 [Styleguide](...)  
 [Content](...)
 [CMS](...)
