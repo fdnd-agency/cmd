@@ -1,0 +1,18 @@
+## Placeholder query
+query HomePage {
+	werkvormen {
+		...Werkvorm
+	}
+}
+
+query DetailPage($link: String!) {
+	werkvormen(where: { link: $link }) {
+		...WerkvormDetail
+	}
+}
+
+query getTags {
+	tags {
+		...Tag
+	}
+}

@@ -1,0 +1,47 @@
+fragment Werkvorm on Werkvorm {
+	title
+	beschrijving
+	thumbnail {
+		url
+	}
+	tags {
+		... on Tag {
+			...Tag
+		}
+	}
+	link
+}
+
+fragment WerkvormDetail on Werkvorm {
+	beschrijving
+	contactpersonen {
+		voornaam
+		achternaam
+		email
+	}
+	opleiding {
+		titel
+		faculteit {
+			titel
+		}
+	}
+	video {
+		url
+	}
+	materialen {
+		url
+	}
+	tags {
+		... on Tag {
+			...Tag
+		}
+	}
+}
+
+fragment Tag on Tag {
+	titel
+	kleur {
+		hex
+	}
+	waarde
+}
