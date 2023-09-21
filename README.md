@@ -6,7 +6,7 @@
 ...
 
 ### Design challenge
-...
+Voor het platform willen het mogelijk maken dat gebruikers via de website werkvormen kunnnen toevoegen. Daarnaast moeten gebruikers de mogelijkheid krijgen om werkvormen als favoriet aan te kunnen wijzen.
 
 ### Resources
 
