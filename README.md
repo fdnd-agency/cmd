@@ -22,6 +22,11 @@ Op het platform willen we het mogelijk maken om gebruikers via de website zelf w
 [Styleguide](...)  
 [Headless CMS / API](https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cldw3z25k1yf201un6r0wa2xc/master)
 
+### Preferred tech stack
+
+Framework: [SvelteKit](https://kit.svelte.dev/)   
+Headless CMS: [Hygraph](https://hygraph.com/)
+
 <!--
 ## Mid Term Website
 
