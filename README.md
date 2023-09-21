@@ -10,6 +10,7 @@
 
 ### Resources
 
+[Live site](https://platform-grote-themas.netlify.app/)
 [Backlog](https://github.com/orgs/fdnd-agency/projects/14/views/2)  
 [Codebase (main-big-themes branch)](https://github.com/fdnd-agency/cmd/tree/main-big-themes)  
 [Ontwerp figma](https://www.figma.com/file/OnK231WnQysdldulabxIzx/Hva-themas-en-werkvormen?node-id=0-1&t=bMT23uB5dewCuEws-0)  
