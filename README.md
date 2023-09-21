@@ -2,11 +2,19 @@
 
 ## Platform Grote Thema's
 
+### Beschrijving
+...
+
+### Design challenge
+...
+
+### Resources
+
 [Backlog](https://github.com/orgs/fdnd-agency/projects/14/views/2)  
 [Codebase (main-big-themes branch)](https://github.com/fdnd-agency/cmd/tree/main-big-themes)  
 [Ontwerp figma](https://www.figma.com/file/OnK231WnQysdldulabxIzx/Hva-themas-en-werkvormen?node-id=0-1&t=bMT23uB5dewCuEws-0)  
 [Styleguide](...)  
-[Headless CMS](...)
+[Headless CMS / API](https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cldw3z25k1yf201un6r0wa2xc/master)
 
 <!--
 ## Mid Term Website
