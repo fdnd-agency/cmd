@@ -3,10 +3,15 @@
 ## Platform Grote Thema's
 
 ### Beschrijving
-...
 
-### Design challenge
-Voor het platform willen het mogelijk maken dat gebruikers via de website werkvormen kunnnen toevoegen. Daarnaast moeten gebruikers de mogelijkheid krijgen om werkvormen als favoriet aan te kunnen wijzen.
+Studenten worden bij de HvA opgeleid tot verantwoordelijke professionals. In hun toekomstige vakgebieden krijgen studenten te maken met uiteenlopende ‘grote en moeilijke’ maatschappelijke thema’s zoals privacy, diversiteit en inclusiviteit en (ecologische) duurzaamheid. Deze thema’s zijn vaak lastig los van elkaar te zien, dat maakt ze ook zo complex.
+
+Binnen opleidingen wordt al aandacht besteed aan Duurzaamheid, Diversiteit & Inclusie en Digitalisering (de 3D’s). Veel docenten willen aan de slag met de 3Ds in hun onderwijs, maar zijn nog zoekend naar manieren om die ‘moeilijke’ thema’s bespreekbaar en toepasbaar te maken in lessen en projecten. Het online platform met korte uitleg van de best practices van collega’s helpt en inspireert docenten om deze thema’s te behandelen in eigen lessen. Op het platform kun je nu een aantal werkvormen zoeken, maar we zouden het platform graag uitbreiden om ervoor te zorgen dat het goed bruikbaar en levend blijft. 
+
+
+### Update van de design challenge
+
+Op het platform willen we het mogelijk maken om gebruikers via de website zelf werkvormen toe te laten voegen. Daarnaast moeten gebruikers de mogelijkheid krijgen werkvormen makkelijk te delen met andere collega's en als favoriet te markeren.
 
 ### Resources
 
