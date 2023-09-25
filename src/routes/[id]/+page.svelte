@@ -36,7 +36,7 @@
 
 <style>
 	section {
-		padding: 2rem;
+		padding: 2rem 2rem;
 		display: flex;
 		justify-content: space-between;
 	}
