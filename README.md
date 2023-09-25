@@ -15,7 +15,7 @@ Op het platform willen we het mogelijk maken om gebruikers via de website zelf w
 
 ### Resources
 
-[Live site](https://platform-grote-themas.vercel.app/)  
+[Live site](https://cmd-git-main-big-themes-fdnd.vercel.app/)  
 [Backlog](https://github.com/orgs/fdnd-agency/projects/14/views/2)  
 [Codebase (main-big-themes branch)](https://github.com/fdnd-agency/cmd/tree/main-big-themes)  
 [Ontwerp figma](https://www.figma.com/file/OnK231WnQysdldulabxIzx/Hva-themas-en-werkvormen?node-id=0-1&t=bMT23uB5dewCuEws-0)  
