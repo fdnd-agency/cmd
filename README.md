@@ -1,41 +1,86 @@
-# CMD 
+# 🖥️ Platform Grote Thema's 
 
-## Platform Grote Thema's
+Deze repository is de release candidate voor de opleiding CMD van de HvA. 
 
-### Beschrijving
+<img width="1440" alt="Scherm­afbeelding 2024-01-24 om 15 17 57" src="https://github.com/Tristandemuijnck/lets-jam-webapplicatie/assets/89298385/caf3f792-213a-49b9-9b57-7d03e100512f">
 
-Studenten worden bij de HvA opgeleid tot verantwoordelijke professionals. In hun toekomstige vakgebieden krijgen studenten te maken met uiteenlopende ‘grote en moeilijke’ maatschappelijke thema’s zoals privacy, diversiteit en inclusiviteit en (ecologische) duurzaamheid. Deze thema’s zijn vaak lastig los van elkaar te zien, dat maakt ze ook zo complex.
+## 📚 Inhoudsopgave
 
-Binnen opleidingen wordt al aandacht besteed aan Duurzaamheid, Diversiteit & Inclusie en Digitalisering (de 3D’s). Veel docenten willen aan de slag met de 3Ds in hun onderwijs, maar zijn nog zoekend naar manieren om die ‘moeilijke’ thema’s bespreekbaar en toepasbaar te maken in lessen en projecten. Het online platform met korte uitleg van de best practices van collega’s helpt en inspireert docenten om deze thema’s te behandelen in eigen lessen. Op het platform kun je nu een aantal werkvormen zoeken, maar we zouden het platform graag uitbreiden om ervoor te zorgen dat het goed bruikbaar en levend blijft. 
+* 📝 Beschrijving
+* 🎮 Gebruik
+* 🎨 Kenmerken
+* ⚙️ Installatie
+* 🔗 Bronnen
+* 💎 Licentie
+
+# 📝 Beschrijving
+
+Voor de opleiding Communication and Multimedia design (CMD) vroeg men om een platform waar ze werkvormen kunnen uploaden. 
+
+# 🎮 Gebruik
+
+De meeste gebruikers van dit platform zijn de docenten van CMD. Zij kunnen door middel van het upload formulier een werkvorm uploaden met bijhorende content als een video, beschrijvende tekst en faculteit waar de opleiding onder valt. Het was primair voor CMD ontworpen maar is voorbereid op het gebruik voor andere opleidngen van andere faculteiten.
+
+# 🎨 Kenmerken
+
+Dit platform is gebouwd met onder andere: `html`, `css`, `javascript` en het framework `Sveltekit`
+
+# ⚙️ Installatie 
+## create-svelte
+
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+
+### Creating a project
+
+If you're seeing this, you've probably already done this step. Congrats!
+
+```bash
+# create a new project in the current directory
+npm create svelte@latest
+
+# create a new project in my-app
+npm create svelte@latest my-app
+```
+
+### Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+### Building
+
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
 
 
-### Update van de design challenge
+## .Env bestand
+Dit project maakt gebruik van een .env bestand om onze omgeving te koppelen aan ons gekozen headless cms Directus. Hier vandaan haalt het project de benodigde data vandaan. De opmaak van het .env bestand ziet er alsvolgt uit:
 
-Op het platform willen we het mogelijk maken om gebruikers via de website zelf werkvormen toe te laten voegen. Daarnaast moeten gebruikers de mogelijkheid krijgen werkvormen makkelijk te delen met andere collega's en als favoriet te markeren.
+```
+DIRECTUS_KEY = "[...]"
+```
 
-### Resources
+Neem contact op voor meer informatie en toegang.
 
-[Live site](https://cmd-git-main-big-themes-fdnd.vercel.app/)  
-[Backlog](https://github.com/orgs/fdnd-agency/projects/14/views/2)  
-[Codebase (main-big-themes branch)](https://github.com/fdnd-agency/cmd/tree/main-big-themes)  
-[Ontwerp figma](https://www.figma.com/file/OnK231WnQysdldulabxIzx/Hva-themas-en-werkvormen?node-id=0-1&t=bMT23uB5dewCuEws-0)  
-[Styleguide](...)  
-[Headless CMS / API](https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cldw3z25k1yf201un6r0wa2xc/master)
+# 🔗 Bronnen
 
-### Preferred tech stack
+[Enhanced colours](https://oklch.com/)
 
-Framework: [SvelteKit](https://kit.svelte.dev/)   
-Headless CMS: [Hygraph](https://hygraph.com/)
+[Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API)
 
-<!--
-## Mid Term Website
+# 💎 Licentie
 
-[Projectboard](https://github.com/fdnd-agency/cmd/projects/1)    
-[Codebase (main-mid-term branch)](https://github.com/fdnd-agency/cmd/tree/main-mid-term)  
-[Ontwerp pdf](https://github.com/fdnd-agency/cmd/blob/main-mid-term/docs/design/CMDAgency_ontwerp.pdf)  
-[Adobe XD Designs](https://github.com/fdnd-agency/cmd/blob/main-mid-term/docs/design/CMDAgency_ontwerp.xd.zip)  
-[Content](https://github.com/fdnd-agency/cmd/tree/main/docs/content)
--->
-
-
-
+This project is licensed under the terms of the [MIT license](./LICENSE).
