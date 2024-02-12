@@ -138,4 +138,12 @@
 			width: 64rem;
 		}
 	}
+
+	@media (min-width: 160rem){
+		.werkvormen{
+			width: 90vw;
+			justify-content: center;
+			height: 50vh;
+		}
+	}
 </style>

@@ -12,4 +12,10 @@
         color: var(--input-hint-color, #ffffff);
         margin-top: 0.2rem;
     }
+    @media (min-width: 170rem) {
+        p{
+            font-size: 200%;
+            max-width: 100%;
+        }
+    }
 </style>

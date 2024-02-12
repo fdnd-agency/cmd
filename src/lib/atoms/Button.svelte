@@ -63,4 +63,12 @@
 	button:focus {
 		outline: var(--btn-focus, #f25379) solid 2px;
 	}
+
+	@media (min-width: 170rem) {
+        button{
+            font-size: 150%;
+            height: 150%;
+			width: 60%;
+        }
+    }
 </style>

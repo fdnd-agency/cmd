@@ -114,5 +114,23 @@ nav {
         font-size: var(--unit-large);
     }
 }
+@media (min-width: 160rem){
+
+		span{
+			font-size: 350%;
+		}
+
+        img:first-child{
+            max-width: 30rem;
+            width: 100%;
+            height: 10rem;
+        }
+        img{
+            width: 50%;
+        }
+        nav{
+            font-size: 200%;
+        }
+    }
 
 </style>

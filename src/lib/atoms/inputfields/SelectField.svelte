@@ -29,4 +29,11 @@
 	select:focus {
 		outline: var(--btn-focus, var(--color-hva-pink)) solid 2px;
 	}
+
+	@media (min-width: 170rem) {
+        select, select::placeholder{
+            font-size: 130%;
+            height: 150%;
+        }
+    }
 </style>

@@ -350,4 +350,35 @@
             grid-area: uploadbutton;
         }
 	}
+
+	@media (min-width: 160rem){
+		main{
+			height: 100vh;
+			font-size: 250%;
+			justify-content: center;
+		}
+		a, header > p, .single-tag{
+			font-size: 100%;
+		}
+
+		.single-tag{
+			border: 4px solid;
+		}
+		.upload-button, .action-button, .description, p{
+			max-width: 60rem;
+			text-wrap: balance;
+		}
+		h2, h1{
+			font-size: 150% !important;
+		}
+		img, video{
+			max-width: 65rem;
+			width: 100%;
+			height: 75%;
+			object-fit: cover;
+		}
+		section{
+			grid-auto-columns: 3fr 2fr;
+		}
+	}
 </style>

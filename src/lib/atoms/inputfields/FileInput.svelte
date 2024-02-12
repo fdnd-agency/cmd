@@ -26,4 +26,10 @@
     input:focus {
         outline: var(--btn-focus, var(--color-hva-pink)) solid 2px;
     }
+
+    @media (min-width: 170rem) {
+        input, input::placeholder{
+            font-size: 200%;
+        }
+    }
 </style>

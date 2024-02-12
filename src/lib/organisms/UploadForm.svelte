@@ -207,4 +207,21 @@
             width: 30rem;
         }
     }
+
+    @media (min-width: 170rem) {
+        form {
+            width: 45rem;
+            height: 75rem;
+            margin-bottom: 5rem;
+        }
+
+        .form-content{
+            height: 100%;
+            justify-content: space-between;
+        }
+        
+        article {
+            width: 50rem;   
+        }
+    }
 </style>
