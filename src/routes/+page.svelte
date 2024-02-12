@@ -62,6 +62,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Platform Grote Thema's</title>
+</svelte:head>
+
 <main>
 	<IntroSection />
 
