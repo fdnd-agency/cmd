@@ -5,10 +5,6 @@
 	let workform = data.workform[0];
 </script>
 
-<svelte:head>
-	<title>{workform.title} · Platform Grote Thema's</title>
-</svelte:head>
-
 <main>
 	<section>
 		<div class="upload-button">
