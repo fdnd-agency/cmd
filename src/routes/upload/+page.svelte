@@ -5,6 +5,10 @@
     export let data;
 </script>
 
+<svelte:head>
+	<title>Werkvorm Uploaden · Platform Grote Thema's</title>
+</svelte:head>
+
 <main>
 	<section>
 		<!-- Heading -->
