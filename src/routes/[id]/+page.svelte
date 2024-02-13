@@ -163,7 +163,7 @@
 		background: var(--color-hva-pink);
 		/* Enhanced kleur binnen @supports */
 		@supports (--css: variables) {
-			background: var(--color-hva-pink-enhanced);
+			background: var(--color-hva-yellow-contrast);
 		}
 		padding: var(--unit-small);
 		aspect-ratio: 1/1;

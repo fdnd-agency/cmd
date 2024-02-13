@@ -446,7 +446,7 @@ ul li button:focus {
 /* Primaire ruisknop */
 .link-primary {
     align-items: center;
-    background: oklch(0.54 0.28 278.48);
+    background: var(--color-hva-pink-enhanced);
     border-radius: var(--unit-micro);
     display: flex;
     gap: var(--unit-small);
@@ -471,7 +471,7 @@ ul li button:focus {
     background: var(--color-hva-pink);
     /* Enhanced kleur binnen @supports */
     @supports (--css: variables) {
-        background: var(--color-hva-pink-enhanced);
+        background: var(--color-hva-yellow-contrast);
     }
 }
 

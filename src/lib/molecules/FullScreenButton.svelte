@@ -82,11 +82,12 @@ button {
     box-shadow: var(--unit-small) var(--unit-small) #1e1649;
     transition: var(--animation-default) ease-in-out;
     z-index: 5;
+    color: black;
 
     /* Enhanced kleuren binnen @supports */
     @supports (--css: variables) {
-        background-color: var(--color-hva-pink-enhanced);
-        border: 2px solid var(--color-hva-pink-enhanced);
+        background-color: var(--color-hva-yellow-contrast);
+        border: 2px solid var(--color-hva-yellow-contrast);
     }
 }
 
