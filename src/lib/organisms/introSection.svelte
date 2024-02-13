@@ -43,4 +43,15 @@
             margin: 0 auto;
         }
     }
+
+    @media (min-width: 170rem){
+        h1{
+            font-size: 175%;
+        }
+		p{
+            font-size: 200%;
+            max-width: 45rem;
+            text-wrap: pretty;
+		}
+	}
 </style>

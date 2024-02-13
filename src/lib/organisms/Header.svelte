@@ -114,7 +114,7 @@ nav {
         font-size: var(--unit-large);
     }
 }
-@media (min-width: 160rem){
+@media (min-width: 170rem){
 
 		span{
 			font-size: 350%;

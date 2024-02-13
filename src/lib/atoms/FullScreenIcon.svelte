@@ -12,4 +12,6 @@
 		width: 1.5rem;
 		aspect-ratio: 1/1;
 	}
+
+
 </style>

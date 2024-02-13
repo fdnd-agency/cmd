@@ -27,8 +27,8 @@
 
     @media (min-width: 170rem) {
         input, input::placeholder{
-            font-size: 130%;
-            height: 150%;
+            font-size: var(--input-font-large);
+            height: var(--input-height-large);
         }
     }
 </style>

@@ -139,7 +139,7 @@
 		}
 	}
 
-	@media (min-width: 160rem){
+	@media (min-width: 170rem){
 		.werkvormen{
 			width: 90vw;
 			justify-content: center;

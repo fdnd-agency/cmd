@@ -145,4 +145,15 @@ button:focus {
     }
 }
 
+@media (min-width: 170rem) {
+    button {
+      width: 16rem;
+      height: 5rem;
+    }
+
+    button figure figcaption {
+      font-size: 150%;   
+    }
+}
+
 </style>

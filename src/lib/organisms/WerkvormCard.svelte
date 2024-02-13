@@ -114,4 +114,10 @@
 		font-size: 0.8rem;
 		font-weight: 500;
 	}
+
+	@media (min-width: 170rem){
+		p, h2, a, li{
+			font-size: 150%;
+		}
+	}
 </style>

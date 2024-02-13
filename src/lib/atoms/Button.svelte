@@ -70,5 +70,9 @@
             height: 150%;
 			width: 60%;
         }
+		.icon-box > img{
+			width: 2rem;
+			height: 2rem;
+		}
     }
 </style>

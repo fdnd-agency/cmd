@@ -38,8 +38,4 @@
 		column-gap: 0.3rem;
 		margin-bottom: 0.3rem;
 	}
-	label{
-		font-size: 500px;
-
-	}
 </style>

@@ -13,8 +13,7 @@
         padding: var(--unit-small) 0.8rem;
         background-color: var(--input-bg, #1E1649);
         color: var(--input-color, #ffffff);
-        font-size: 200%;
-
+        
     }
 
     input::placeholder {
@@ -26,9 +25,5 @@
         outline: var(--btn-focus, #F25379) solid 2px;
     }
 
-    @media (min-width: 170rem) {
-        input, input::placeholder{
-            font-size: 200%;
-        }
-    }
+
 </style>

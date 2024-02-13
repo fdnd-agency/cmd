@@ -20,6 +20,8 @@
     --unit-small: 0.5rem;
     --unit-default: 1rem;
     --unit-large: 2rem;
+    --input-font-large: 130%;
+    --input-height-large: 150%;
 }
 
 :root{
@@ -42,6 +44,8 @@
     --unit-small: 0.5rem;
     --unit-default: 1rem;
     --unit-large: 2rem;
+    --input-font-large: 130%;
+    --input-height-large: 150%;
 }
 
 /* -------------------------------------------------------------------------- */

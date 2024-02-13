@@ -506,4 +506,14 @@ ul.desktop-menu a {
     }
 }
 
+@media (min-width: 170rem) {
+    button, a{
+		font-size: 200% !important;
+	}
+
+	.desktop-menu{
+		height: 4rem;
+	}
+}
+
 </style>
