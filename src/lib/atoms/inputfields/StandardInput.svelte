@@ -7,6 +7,7 @@
 </script>
 
 <input type="{inputType}" placeholder="{inputPlaceholder}" name="{inputName}" id="{inputId}" required={isRequired || false}>
+<span></span>
 
 <style>
     input{
@@ -22,7 +23,23 @@
     }
 
     input:focus {
-        outline: var(--btn-focus, var(--color-hva-pink)) solid 2px;
+        outline: var(--btn-focus, var(--color-hva-pink)) dashed 2px;
+        
+    }
+
+    input:user-invalid {
+        border: 2px solid red;
+        animation: shake 0.2s ease-in-out 0s 2;
+        
+    }
+
+    span::before{
+        content: " ";
+    }
+    
+    input:user-invalid + span::before {
+        content: "✖";
+        color: red;
     }
 
     @media (min-width: 170rem) {
@@ -30,5 +47,12 @@
             font-size: var(--input-font-large);
             height: var(--input-height-large);
         }
+    }
+
+    @keyframes shake {
+        0% { margin-left: 0rem; }
+        25% { margin-left: 0.5rem; }
+        75% { margin-right: -0.5rem; }
+        100% { margin-left: 0rem; }
     }
 </style>

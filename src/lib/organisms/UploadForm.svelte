@@ -196,7 +196,7 @@
         font-weight: 400;
         text-align: center;
     }
-
+    
     @media (min-width: 48rem) {
         form {
             width: 30rem;
