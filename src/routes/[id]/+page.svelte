@@ -160,16 +160,17 @@
 		justify-content: center;
 		position: absolute;
 		left: 0rem;
+		padding: var(--unit-small);
+		aspect-ratio: 1/1;
+		transform: rotate(45deg);
 		background: var(--color-hva-pink);
 		/* Enhanced kleur binnen @supports */
 		@supports (--css: variables) {
 			background: var(--color-hva-yellow-contrast);
 		}
-		padding: var(--unit-small);
-		aspect-ratio: 1/1;
-		transform: rotate(45deg);
-		transition: transform var(--animation-quick) ease-in-out;
 	}
+
+
 
 	.icon-box > svg,
 	img {
@@ -188,14 +189,17 @@
 		font-weight: 600;
 		font-family: 'Open Sans', sans-serif;
 		cursor: pointer;
+		text-decoration: underline;
 	}
 
 	a.mail-to-link {
 		padding: 0;
 	}
 
-	a:hover {
+	.upload-button:hover, .action-button:hover {
 		background-color: unset;
+		transform: scale(1.05);
+		transition: transform var(--animation-quick) ease-in-out;
 	}
 
 	a.mail-to-link:hover {
