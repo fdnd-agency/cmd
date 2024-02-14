@@ -15,6 +15,10 @@
 
 	}
 
+    a:focus{
+        border: var(--btn-focus, var(--color-hva-pink)) dashed 2px;
+    }
+
     @media (min-width: 48rem) {
         footer {
             margin: 0 auto;

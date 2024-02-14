@@ -125,6 +125,9 @@
 		color: white;
 		margin: 0;
 	}
+	*:focus {
+        outline: var(--btn-focus, var(--color-hva-pink)) dashed 2px;
+    }
 
 	main {
 		display: flex;
@@ -204,6 +207,10 @@
 
 	a.mail-to-link:hover {
 		opacity: 0.7;
+	}
+
+	a.mail-to-link:focus p {
+		border: var(--btn-focus, var(--color-hva-pink)) dashed 2px;
 	}
 
 	header {
