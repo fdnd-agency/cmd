@@ -78,6 +78,10 @@ a {
     text-decoration: underline;
 }
 
+a:focus img, nav a:focus{
+    outline: var(--btn-focus, var(--color-hva-pink)) dashed 2px;
+}
+
 .nav-components {
     display: flex;
     flex-direction: row;
