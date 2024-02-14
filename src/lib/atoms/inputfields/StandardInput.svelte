@@ -30,7 +30,6 @@
     input:user-invalid {
         border: 2px solid red;
         animation: shake 0.2s ease-in-out 0s 2;
-        
     }
 
     span::before{
@@ -54,5 +53,11 @@
         25% { margin-left: 0.5rem; }
         75% { margin-right: -0.5rem; }
         100% { margin-left: 0rem; }
+    }
+
+    @media (prefers-reduced-motion) {
+		input:user-invalid {
+        animation: none;
+    }
     }
 </style>

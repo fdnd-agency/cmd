@@ -57,4 +57,11 @@
         75% { margin-right: -0.5rem; }
         100% { margin-left: 0rem; }
     }
+
+    @media (prefers-reduced-motion) {
+		input:user-invalid {
+        animation: none;
+    }
+    }
+    
 </style>

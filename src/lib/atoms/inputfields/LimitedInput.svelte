@@ -25,7 +25,6 @@
 
     input:focus {
         outline: var(--btn-focus, var(--color-hva-pink)) dashed 2px;
-        
     }
 
     input:user-invalid {
@@ -56,4 +55,11 @@
         75% { margin-right: -0.5rem; }
         100% { margin-left: 0rem; }
     }
+
+    @media (prefers-reduced-motion) {
+		input:user-invalid {
+        animation: none;
+    }
+    }
+    
 </style>
