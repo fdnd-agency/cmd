@@ -120,4 +120,10 @@
 			font-size: 150%;
 		}
 	}
+
+	@media (prefers-reduced-motion) {
+		article:hover a {
+		transform: translateX(0);
+	}
+    }
 </style>

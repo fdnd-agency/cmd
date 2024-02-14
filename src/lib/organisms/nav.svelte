@@ -426,6 +426,7 @@ nav .menu-item button {
 nav a:hover,
 ul li button:hover {
     background-color: var(--color-hva-pink);
+	color: black;
     /* Enhanced kleur binnen @supports */
     @supports (--css: variables) {
         background-color: var(--color-hva-pink-enhanced);

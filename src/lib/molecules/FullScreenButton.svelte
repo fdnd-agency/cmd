@@ -107,13 +107,14 @@ button figure figcaption {
 
 /* Interactive states */
 button:hover {
-    background-color: var(--color-hva-blue-secundary);
-    border: 2px solid var(--color-hva-blue-secundary);
+    background-color: var(--color-hva-pink);
+    border: 2px solid var(--color-hva-pink);
+    color: white;
 
     /* Enhanced kleuren binnen @supports */
     @supports (--css: variables) {
-        background-color: var(--color-hva-blue-secundary-enhanced);
-        border: 2px solid var(--color-hva-blue-secundary-enhanced);
+        background-color: var(--color-hva-pink-enhanced);
+        border: 2px solid var(--color-hva-pink-enhanced);
     }
 
     box-shadow: 0px 0px #1e1649;

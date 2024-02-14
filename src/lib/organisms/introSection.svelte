@@ -3,7 +3,8 @@
 </script>
 <section>
     <div>
-        <img src="/images/werkvorm-animation.gif" width="300" height="300" alt="animatie" />
+        <img src="/images/werkvorm-animation.gif" width="300" height="300" alt="animatie" id="animation-image"/>
+        <img src="/images/werkvorm-reduced.svg" width="300" height="300" alt="werkvormen icon" id="reduced-image" />
     </div>
     <div>
         <h1>Welkom op het platform Werkvormen Grote Thema's</h1>
@@ -23,6 +24,11 @@
         width: 150px;
         height: 150px;
     }
+
+    #reduced-image{
+        display: none;
+    }
+
 
     @media (min-width: 768px){
         section {
@@ -54,4 +60,14 @@
             text-wrap: pretty;
 		}
 	}
+
+    @media (prefers-reduced-motion) {
+        #animation-image {
+            display: none;
+        }
+
+        #reduced-image{
+            display: block;
+        }
+    }
 </style>
