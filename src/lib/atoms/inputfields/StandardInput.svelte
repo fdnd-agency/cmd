@@ -4,6 +4,8 @@
     export let inputName = ""
     export let inputId = ""
     export let isRequired = false
+
+
 </script>
 
 <input type="{inputType}" placeholder="{inputPlaceholder}" name="{inputName}" id="{inputId}" required={isRequired || false}>

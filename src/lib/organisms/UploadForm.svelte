@@ -1,5 +1,6 @@
 <script>
 	import { applyAction, enhance } from '$app/forms'
+	import { onMount } from 'svelte';
 
 	import FormField from '$lib/molecules/FormField.svelte'
 	import SelectFormField from '$lib/molecules/SelectFormField.svelte';
@@ -11,6 +12,7 @@
 	export let formMethod
     export let btnText
 	export let data
+    export let newValidator = new Array()
 
     let tagOptions = data.tag.map((tag) => {
         return {
@@ -45,8 +47,52 @@
         showUpload = !showUpload;
         showVerify = !showVerify;
     }
+    function removeDuplicates(data){
+            return data.filter((value, index) => data.indexOf(value) === index)
+        }
+
+    onMount(async () => {
+        let errorStandard = document.querySelectorAll("input, select");
+        let labelStandard = document.querySelectorAll("label");
+        let listValidator = document.querySelector(".validator-hidden")
+        
+
+
+        for(let i=0; i < errorStandard.length; i++){
+            errorStandard[i].addEventListener("input", (event)=>{
+                console.log(errorStandard[i].validity)
+            if(errorStandard[i].validity.valid == true){
+            console.log("ok")
+            if(!listValidator.classList.contains("validator-hidden")){
+                listValidator.classList.toggle("validator-hidden");
+            }
+        }
+        else if(errorStandard[i].validity.valueMissing == true){
+            errorStandard[i].setCustomValidity("Vul " + labelStandard[i].innerHTML + " in." );
+            newValidator.push(errorStandard[i].validationMessage);
+            newValidator = removeDuplicates(newValidator);
+            if(listValidator.classList.contains("validator-hidden")){
+                listValidator.classList.toggle("validator-hidden");
+            }
+            return newValidator;
+        }
+        else{
+            errorStandard[i].setCustomValidity("");
+        }
+
+        })
+        }
+
+	})
+
 </script>
 
+<ul class="validator-hidden validator">
+    {#each newValidator as newValidators}
+    {console.log(newValidators)}
+    <li>{newValidators}</li>
+{/each}
+</ul>
 <form action={formAction} method={formMethod} use:enhance={handleSubmit} class:showLogin={showUpload} on:submit={toggleUpload} enctype="multipart/form-data">
 	<div class="form-content">
 		<!-- Naam -->
@@ -154,6 +200,12 @@
 </article>
 
 <style>
+    .validator-hidden{
+        display: none;
+    }
+    .validator{
+        border: solid 1px red;
+    }
 	form {
 		display: none;
 		flex-direction: column;
