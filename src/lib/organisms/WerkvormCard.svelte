@@ -121,6 +121,13 @@
 		}
 	}
 
+	@media (max-width: 18rem) {
+		article {
+			min-width: 15rem;
+			width: 15rem;
+		}
+	}
+
 	@media (prefers-reduced-motion) {
 		article:hover a {
 		transform: translateX(0);

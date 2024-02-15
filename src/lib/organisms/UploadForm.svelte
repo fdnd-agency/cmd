@@ -76,12 +76,10 @@
             errorStandard[i].setCustomValidity("Vul " + labelStandard[i].innerHTML + " in." );
             newValidator.push(errorStandard[i].validationMessage);
             newValidator = removeDuplicates(newValidator);
-
             return newValidator;
         }
         else{
             errorStandard[i].setCustomValidity("");
-
         }
 
         })

@@ -119,6 +119,13 @@
 		transition: var(--animation-default) ease-in-out;
 	}
 
+	@media (max-width: 18rem) {
+		.werkvormen {
+			width: 16rem;
+			justify-content: center;
+		}
+	}
+
 	@media (min-width: 46rem) {
 		.werkvormen {
 			width: 42rem;
