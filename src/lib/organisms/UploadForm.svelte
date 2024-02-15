@@ -54,16 +54,21 @@
     onMount(async () => {
         let errorStandard = document.querySelectorAll("input, select");
         let labelStandard = document.querySelectorAll("label");
-        let listValidator = document.querySelector(".validator-hidden")
-        
+        let listValidator = document.querySelector(".validator")
+        let submitButton = document.querySelector("button")
 
 
         for(let i=0; i < errorStandard.length; i++){
+            newValidator.push(errorStandard[i].validationMessage);
+            newValidator = newValidator;
             errorStandard[i].addEventListener("input", (event)=>{
                 console.log(errorStandard[i].validity)
             if(errorStandard[i].validity.valid == true){
-            console.log("ok")
-            if(!listValidator.classList.contains("validator-hidden")){
+            
+            // newValidator.pop();
+            // newValidator = removeDuplicates(newValidator);
+            console.log(newValidator)
+            if(newValidator.length == 0){
                 listValidator.classList.toggle("validator-hidden");
             }
         }
@@ -71,25 +76,28 @@
             errorStandard[i].setCustomValidity("Vul " + labelStandard[i].innerHTML + " in." );
             newValidator.push(errorStandard[i].validationMessage);
             newValidator = removeDuplicates(newValidator);
-            if(listValidator.classList.contains("validator-hidden")){
-                listValidator.classList.toggle("validator-hidden");
-            }
+
             return newValidator;
         }
         else{
             errorStandard[i].setCustomValidity("");
+
         }
 
         })
         }
 
+        submitButton.addEventListener("click", () =>{
+            if(listValidator.classList.contains("validator-hidden")){
+                listValidator.classList.toggle("validator-hidden");
+            }
+        })
 	})
 
 </script>
 
 <ul class="validator-hidden validator">
     {#each newValidator as newValidators}
-    {console.log(newValidators)}
     <li>{newValidators}</li>
 {/each}
 </ul>
@@ -204,7 +212,10 @@
         display: none;
     }
     .validator{
-        border: solid 1px red;
+        row-gap: var(--unit-small);
+        padding: var(--unit-large) var(--unit-large);
+        background: var(--color-hva-navy);
+        height: 30vh;
     }
 	form {
 		display: none;

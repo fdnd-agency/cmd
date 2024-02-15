@@ -35,12 +35,13 @@
 			<img
 				class="thumbnail"
 				src={'https://platform-big-themes.directus.app/assets/' + workform.thumbnail.id}
-				alt="Thumbnail"
+				alt="{workform.alt}"
 			/>
 		{:else}
 			<video
 				controls
 				poster={'https://platform-big-themes.directus.app/assets/' + workform.thumbnail.id}
+				alt={workform.alt}
                 width="480" height="480"
 			>
 				<source
@@ -77,7 +78,7 @@
 			</div>
 
 			<div class="tags">
-				<h2>Tags</h2>
+				<h3>Tags</h3>
 				<div class="tag-list">
 					{#if workform.tags.length > 0}
 						{#each workform.tags as tag}
