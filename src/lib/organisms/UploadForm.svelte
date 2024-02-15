@@ -61,7 +61,7 @@
         for(let i=0; i < errorStandard.length; i++){
             newValidator.push(errorStandard[i].validationMessage);
             newValidator = newValidator;
-            errorStandard[i].addEventListener("input", (event)=>{
+            errorStandard[i].addEventListener("input", ()=>{
                 console.log(errorStandard[i].validity)
             if(errorStandard[i].validity.valid == true){
             
