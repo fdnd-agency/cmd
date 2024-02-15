@@ -138,8 +138,8 @@
 
 	<!-- Het desktop menu voor grotere schermen -->
 	<ul class="desktop-menu" role="menu" tabindex="0">
-		<li>
-			<button id="filterSearch" aria-expanded="false" type="button">
+		<li role="menuitem">
+			<button id="filterSearchDesktop" aria-expanded="false" type="button">
 				<svg
 					width="24"
 					height="24"
@@ -165,7 +165,7 @@
 				filteren & zoeken
 			</button>
 		</li>
-		<li>
+		<li role="menuitem">
 			<a class="link-primary" href="/upload">
 				<svg
 					width="24"
