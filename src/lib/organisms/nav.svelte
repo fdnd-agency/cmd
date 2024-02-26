@@ -72,7 +72,7 @@
 			</summary>
 			<ul id="mobile-menu">
 				<li class="menu-item">
-					<button id="filterSearch" aria-expanded="false" aria-controls="mega-menu" type="button">
+					<button id="filterSearchMobile" class="filterSearch" aria-expanded="false" aria-controls="mega-menu" type="button">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							class="icon icon-tabler icon-tabler-filter"
@@ -139,7 +139,7 @@
 	<!-- Het desktop menu voor grotere schermen -->
 	<ul class="desktop-menu" role="menu" tabindex="0">
 		<li role="menuitem">
-			<button id="filterSearchDesktop" aria-expanded="false" type="button">
+			<button id="filterSearchDesktop" class="filterSearch"aria-expanded="false" type="button">
 				<svg
 					width="24"
 					height="24"

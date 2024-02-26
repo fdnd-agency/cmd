@@ -41,7 +41,7 @@
 	onMount(async () => {
 		document.documentElement.classList.add('javascriptEnabled');
 
-		const filterSearchButtons = document.querySelectorAll('#filterSearch');
+		const filterSearchButtons = document.querySelectorAll('.filterSearch');
 
 		filterSearchButtons.forEach((filterSearchButton) => {
 			const filterMegaMenu = document.querySelector('#mega-menu');

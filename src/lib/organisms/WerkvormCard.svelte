@@ -23,7 +23,7 @@
 				<p>Geen beschrijving beschikbaar.</p>
 			{/if}
 		</div>
-		<a href={workform.link}><img src="images/icons/arrow-right.svg" alt="" />Bekijk werkvorm</a>
+		<a href={workform.link}><img src="images/icons/arrow-right.svg" alt="pijl die naar rechts wijst" />Bekijk werkvorm</a>
 	</div>
 </article>
 
