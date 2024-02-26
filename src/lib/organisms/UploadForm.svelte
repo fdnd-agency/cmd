@@ -56,35 +56,42 @@
         let labelStandard = document.querySelectorAll("label");
         let listValidator = document.querySelector(".validator")
         let submitButton = document.querySelector("button")
-
+        let removed = false;
 
         for(let i=0; i < errorStandard.length; i++){
+            errorStandard[i].setCustomValidity("Vul " + labelStandard[i].innerHTML + " in." );
             newValidator.push(errorStandard[i].validationMessage);
             newValidator = newValidator;
-            errorStandard[i].addEventListener("input", ()=>{
-                console.log(errorStandard[i].validity)
+            errorStandard[i].addEventListener("input change", ()=>{
             if(errorStandard[i].validity.valid == true){
             
             // newValidator.pop();
             // newValidator = removeDuplicates(newValidator);
-            console.log(newValidator)
+            if(!errorStandard[i].classList.contains("removed-class")){
+                newValidator.splice(i, 1)
+                newValidator = newValidator;
+                errorStandard[i].classList.add("removed-class")
+                removed = true;
+            }
+
+            console.log(errorStandard[i].value)
             if(newValidator.length == 0){
                 listValidator.classList.toggle("validator-hidden");
             }
         }
         else if(errorStandard[i].validity.valueMissing == true){
             errorStandard[i].setCustomValidity("Vul " + labelStandard[i].innerHTML + " in." );
-            newValidator.push(errorStandard[i].validationMessage);
+            newValidator.splice(i, 0, errorStandard[i].validationMessage);
             newValidator = removeDuplicates(newValidator);
+            errorStandard[i].classList.remove("removed-class")
+            removed = false;
             return newValidator;
         }
         else{
             errorStandard[i].setCustomValidity("");
         }
-
         })
         }
-
         submitButton.addEventListener("click", () =>{
             if(listValidator.classList.contains("validator-hidden")){
                 listValidator.classList.toggle("validator-hidden");
