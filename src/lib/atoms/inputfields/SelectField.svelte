@@ -7,7 +7,7 @@
 </script>
 
 <select name={selectName} id={selectId} required={isRequired}>
-    <option value="" disabled>{selectPlaceholder}</option>
+    <option value="">{selectPlaceholder}</option>
     {#each options as option}
         <option value={option.id}>{option.title}</option>
     {/each}

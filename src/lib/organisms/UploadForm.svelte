@@ -62,19 +62,22 @@
             errorStandard[i].setCustomValidity("Vul " + labelStandard[i].innerHTML + " in." );
             newValidator.push(errorStandard[i].validationMessage);
             newValidator = newValidator;
-            errorStandard[i].addEventListener("input change", ()=>{
+            
+            ['change', 'input'].forEach(function(e) {
+                errorStandard[i].addEventListener("input", ()=>{
+                    console.log(newValidator)
             if(errorStandard[i].validity.valid == true){
             
             // newValidator.pop();
             // newValidator = removeDuplicates(newValidator);
             if(!errorStandard[i].classList.contains("removed-class")){
                 newValidator.splice(i, 1)
-                newValidator = newValidator;
+                newValidator = removeDuplicates(newValidator);
                 errorStandard[i].classList.add("removed-class")
                 removed = true;
             }
 
-            console.log(errorStandard[i].value)
+            
             if(newValidator.length == 0){
                 listValidator.classList.toggle("validator-hidden");
             }
@@ -90,7 +93,12 @@
         else{
             errorStandard[i].setCustomValidity("");
         }
+        // if(newValidator[i].includes(" ")){
+        //         newValidator.splice(i, 1);
+        // }
         })
+            });
+            
         }
         submitButton.addEventListener("click", () =>{
             if(listValidator.classList.contains("validator-hidden")){
