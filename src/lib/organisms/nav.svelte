@@ -92,7 +92,7 @@
 					</button>
 				</li>
 				<li class="menu-item">
-					<a class="link-primary" href="/upload" aria-expanded="true">
+					<a class="link-primary" href="/protected/upload" aria-expanded="true">
 						<svg
 							width="24"
 							height="24"
@@ -166,7 +166,7 @@
 			</button>
 		</li>
 		<li role="menuitem">
-			<a class="link-primary" href="/upload">
+			<a class="link-primary" href="/protected/upload">
 				<svg
 					width="24"
 					height="24"

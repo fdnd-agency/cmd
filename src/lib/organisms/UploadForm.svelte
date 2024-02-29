@@ -173,7 +173,7 @@
       selectId="werkvormOpleiding"
       selectPlaceholder="Selecteer een opleiding..."
       options={data.course}
-      isRequired={false}
+      isRequired={true}
     />
 
     <!-- Contactpersoon -->
@@ -185,7 +185,7 @@
       selectId="werkvormContactpersoon"
       selectPlaceholder="Selecteer een contactpersoon..."
       options={contactpersoonObj}
-      isRequired={false}
+      isRequired={true}
     />
 
     <!-- Thumbnail -->
