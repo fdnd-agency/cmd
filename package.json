@@ -17,6 +17,7 @@
 		"eslint-plugin-svelte": "^2.30.0",
 		"prettier": "^3.0.0",
 		"prettier-plugin-svelte": "^3.0.0",
+		"prisma": "^5.10.2",
 		"svelte": "^4.2.7",
 		"vite": "^4.4.2"
 	},
@@ -25,7 +26,12 @@
 		"@auth/core": "^0.27.0",
 		"@auth/mongodb-adapter": "^2.4.0",
 		"@auth/sveltekit": "^0.13.0",
+		"@lucia-auth/adapter-prisma": "^4.0.0",
+		"@prisma/client": "^5.10.2",
+		"@tsndr/cloudflare-worker-jwt": "^2.5.1",
+		"lucia-auth": "^1.8.0",
 		"mongodb": "^6.3.0",
-		"nodemailer": "^6.9.11"
+		"nodemailer": "^6.9.11",
+		"oslo": "^1.1.3"
 	}
 }
