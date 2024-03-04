@@ -1,0 +1,13 @@
+{
+  "version": "5",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1709550112496,
+      "tag": "0000_flimsy_mattie_franklin",
+      "breakpoints": true
+    }
+  ]
+}
