@@ -1,4 +1,5 @@
 <script>
+    
     export let inputType = "text"
     export let inputPlaceholder = "placeholder"
     export let inputName = ""

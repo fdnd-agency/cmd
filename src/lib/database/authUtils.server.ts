@@ -19,3 +19,4 @@ export const deleteSessionCookie = async (lucia: Lucia, cookies: Cookies) => {
 		...sessionCookie.attributes
 	});
 };
+

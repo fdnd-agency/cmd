@@ -2,6 +2,7 @@
 
 	// import { toast } from 'svelte-sonner';
 	import { superForm } from 'sveltekit-superforms/client';
+	import { zod } from 'sveltekit-superforms/adapters';
 
 	import { route } from '$lib/ROUTES';
 	import {
@@ -12,14 +13,14 @@
 	} from '$lib/validations/AuthZodSchemas';
 
 	import InputField from '$lib/atoms/inputfields/SuperValidInput.svelte';
-	import Button from '$lib/atoms/Button.svelte';
+	import SuperValidButton from '$lib/atoms/SuperValidButton.svelte';
 
 	export let data;
 
 	const { enhance, errors, form, message } = superForm(data.registerUserFormData, {
 		resetForm: true,
 		taintedMessage: null,
-		validators: RegisterUserZodSchema,
+		validators: zod(RegisterUserZodSchema)
 
 		// onUpdated: () => {
 		// 	if (!$message) return;
@@ -67,5 +68,5 @@
 		maxlength={MAX_PASSWORD_LENGTH}
 	/>
 
-	<Button btnType="submit" btnText='something'></Button>
+	<SuperValidButton></SuperValidButton>
 </form>

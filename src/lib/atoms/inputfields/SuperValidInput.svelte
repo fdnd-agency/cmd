@@ -21,20 +21,19 @@
 </script>
 
 <label
-	class="grid gap-1 text-sm font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
 >
 	<div>
 		<span>{label}</span>
 
 		{#if maxlength}
-			<span class="text-xs text-muted-foreground">
+			<span>
 				{valueLength}/{maxlength}
 			</span>
 		{/if}
 	</div>
 
 	{#if errorMessage}
-		<p class="text-red-500">{errorMessage}</p>
+		<p>{errorMessage}</p>
 	{/if}
 
 	<input

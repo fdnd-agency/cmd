@@ -6,6 +6,7 @@ import { message, setError, superValidate } from 'sveltekit-superforms/server';
 import { lucia } from '$lib/database/auth.server';
 import { generateId } from 'lucia';
 import { Argon2id } from 'oslo/password';
+import { zod } from 'sveltekit-superforms/adapters';
 
 import { createAndSetSession } from '$lib/database/authUtils.server';
 import { checkIfEmailExists, insertNewUser } from '$lib/database/databaseUtils.server';
@@ -15,8 +16,9 @@ import { logError } from '$lib/utils/index';
 import { RegisterUserZodSchema } from '$lib/validations/AuthZodSchemas';
 
 export const load = (async () => {
+    console.log(zod(RegisterUserZodSchema))
 	return {
-		registerUserFormData: await superValidate(RegisterUserZodSchema)
+		registerUserFormData: await superValidate(zod(RegisterUserZodSchema))
 	};
 }) satisfies PageServerLoad;
 
@@ -25,7 +27,7 @@ export const actions: Actions = {
 		const registerUserFormData = await superValidate<
 			typeof RegisterUserZodSchema,
 			AlertMessageType
-		>(request, RegisterUserZodSchema);
+		>(request, zod(RegisterUserZodSchema));
 
 		if (registerUserFormData.valid === false) {
 			return message(registerUserFormData, {

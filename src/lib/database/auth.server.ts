@@ -23,6 +23,7 @@ export const lucia = new Lucia(dbAdapter, {
 	}
 });
 
+
 declare module 'lucia' {
 	interface Register {
 		Lucia: typeof lucia;
