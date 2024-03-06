@@ -1,6 +1,9 @@
 import { DIRECTUS_KEY } from '$env/static/private'
+import type { Actions, PageServerLoad } from '$lib/types';
+import { redirect } from 'sveltekit-flash-message/server';
+import { route } from '$lib/ROUTES';
 
-export async function load() {
+export const load = (async ({ locals: { user }, cookies }) => {
 	// Get all data for select fields
 	const reqCourse = await fetch('https://platform-big-themes.directus.app/items/course')
 	const reqContact = await fetch('https://platform-big-themes.directus.app/items/contact')
@@ -14,9 +17,38 @@ export async function load() {
 		contact: dataContact.data,
 		tag: dataTag.data
 	}
+	if (!user) {
+		throw redirect(
+			route('/login'),
+			{
+				type: 'error',
+				message: 'You must be logged in to view the dashboard.'
+			},
+			cookies
+		);
+	}
+	return {
+		data: data,
+		loggedInUserName: user.name
+	}
+})satisfies PageServerLoad;
 
-	return data
-}
+// export const load = (async ({ locals: { user }, cookies }) => {
+// 	if (!user) {
+// 		throw redirect(
+// 			route('/login'),
+// 			{
+// 				type: 'error',
+// 				message: 'You must be logged in to view the dashboard.'
+// 			},
+// 			cookies
+// 		);
+// 	}
+
+// 	return {
+// 		loggedInUserName: user.name,
+// 	};
+// }) satisfies PageServerLoad;
 
 // Upload file to Directus files
 async function uploadFile(filedata) {

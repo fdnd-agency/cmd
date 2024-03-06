@@ -14,6 +14,8 @@
   export let data;
   export let newValidator = new Array();
 
+  data = data.data;
+  console.log(data)
   let tagOptions = data.tag.map((tag) => {
     return {
       id: tag.id,
