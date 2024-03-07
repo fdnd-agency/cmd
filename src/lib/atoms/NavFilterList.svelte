@@ -1,7 +1,7 @@
 <script>
 	export let searchInput;
 	export let data;
-	import { setTag, selectedTag } from '../Utils/tagStore';
+	import { setTag, selectedTag } from '../utils/tagStore';
 
 	let allTags = data.tag;
 	let isActive = false;

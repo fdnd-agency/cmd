@@ -7,7 +7,7 @@
 	import NavFilterList from '../lib/atoms/NavFilterList.svelte';
 	import FullScreenButton from '../lib/molecules/FullScreenButton.svelte';
 	import IntroSection from '../lib/organisms/introSection.svelte';
-	import { selectedTag } from '../lib/Utils/tagStore';
+	import { selectedTag } from '../lib/utils/tagStore';
 	import LogoutButton from '$lib/atoms/logout/logout.svelte';
 	/* ----------------------------- TRISTAN ATTEMPT ---------------------------- */
 
