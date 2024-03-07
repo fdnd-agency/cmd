@@ -1,20 +1,22 @@
 import * as dotenv from 'dotenv';
-import type { Config } from 'drizzle-kit';
+import { defineConfig } from 'drizzle-kit'
 
 dotenv.config();
-const { DATABASE_URL } = process.env;
+const { POSTGRES_URL } = process.env;
 
-if (!DATABASE_URL) {
+if (!POSTGRES_URL) {
 	throw new Error(
 		'No DATABASE_URL defined in the environment variables. Please ensure it is set in the .env file.'
 	);
 }
 
-export default {
+export default defineConfig({
 	schema: 'src/lib/database/schema.ts',
 	out: './drizzleMigrations',
-	driver: 'better-sqlite',
+	driver: 'pg',
 	dbCredentials: {
-		url: DATABASE_URL
-	}
-} satisfies Config;
+		connectionString: POSTGRES_URL,
+	},
+	verbose: true,
+	strict: true,
+})

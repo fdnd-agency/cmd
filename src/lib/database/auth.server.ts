@@ -1,12 +1,16 @@
 import { dev } from '$app/environment';
 
 import { DrizzleSQLiteAdapter } from '@lucia-auth/adapter-drizzle';
+import { NodePostgresAdapter, PostgresJsAdapter } from "@lucia-auth/adapter-postgresql";
+import { sql, createPool } from '@vercel/postgres';
 import { Lucia } from 'lucia';
-
+import { POSTGRES_URL } from '$env/static/private'
 import { database } from './database.server';
 import { usersSessionsTable, usersTable } from './schema';
 
-const dbAdapter = new DrizzleSQLiteAdapter(database, usersSessionsTable, usersTable);
+const db = createPool({ connectionString: POSTGRES_URL })
+
+const dbAdapter = new NodePostgresAdapter(db, {usersSessionsTable, usersTable});
 
 export const lucia = new Lucia(dbAdapter, {
 	sessionCookie: {
