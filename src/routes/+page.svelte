@@ -3,11 +3,11 @@
 	import Nav from '$lib/organisms/nav.svelte';
 	import { page } from '$app/stores';
 
-	import WerkvormCard from '../lib/organisms/WerkvormCard.svelte';
-	import NavFilterList from '../lib/atoms/NavFilterList.svelte';
-	import FullScreenButton from '../lib/molecules/FullScreenButton.svelte';
-	import IntroSection from '../lib/organisms/introSection.svelte';
-	import { selectedTag } from '../lib/utils/tagStore';
+	import WerkvormCard from '$lib/organisms/WerkvormCard.svelte';
+	import NavFilterList from '$lib/atoms/NavFilterList.svelte';
+	import FullScreenButton from '$lib/molecules/FullScreenButton.svelte';
+	import IntroSection from '$lib/organisms/introSection.svelte';
+	import { selectedTag } from '$lib/utils/tagStore';
 	import LogoutButton from '$lib/atoms/logout/logout.svelte';
 	/* ----------------------------- TRISTAN ATTEMPT ---------------------------- */
 
