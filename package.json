@@ -8,11 +8,11 @@
 		"preview": "vite preview",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
-		"db:generate": "drizzle-kit generate:mysql --config=drizzle-config.ts",
-		"db:push": "drizzle-kit push:mysql --config=drizzle-config.ts",
-		"db:pull": "drizzle-kit introspect:mysql --config=drizzle-config.ts",
+		"db:generate": "drizzle-kit generate:pg --config=drizzle-config.ts",
+		"db:push": "drizzle-kit push:pg --config=drizzle-config.ts",
+		"db:pull": "drizzle-kit introspect:pg --config=drizzle-config.ts",
 		"db:drop": "drizzle-kit drop --config=drizzle-config.ts",
-		"db:check": "drizzle-kit check:mysql --config=drizzle-config.ts",
+		"db:check": "drizzle-kit check:pg --config=drizzle-config.ts",
 		"db:studio": "drizzle-kit studio --config=drizzle-config.ts"
 	},
 	"devDependencies": {
@@ -28,6 +28,7 @@
 		"svelte": "^4.2.7",
 		"sveltekit-flash-message": "^2.4.2",
 		"sveltekit-superforms": "^2.7.0",
+		"tsx": "^4.7.1",
 		"vite": "^4.4.2",
 		"vite-plugin-kit-routes": "^0.5.2",
 		"zod": "^3.22.4"

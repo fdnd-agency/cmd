@@ -1,7 +1,8 @@
 import { sql } from 'drizzle-orm';
-import { integer, sqliteTable, text } from 'drizzle-orm/sqlite-core';
+import { integer, pgTable, text, timestamp } from 'drizzle-orm/pg-core';
 
-export const usersTable = sqliteTable('users', {
+
+export const usersTable = pgTable('users', {
 	id: text('id').primaryKey().notNull(),
 
 	name: text('name').notNull(),
@@ -13,14 +14,14 @@ export const usersTable = sqliteTable('users', {
 	createdAt: text('created_at').default(sql`CURRENT_TIMESTAMP`)
 });
 
-export const usersSessionsTable = sqliteTable('users_sessions', {
+export const usersSessionsTable = pgTable('users_sessions', {
 	id: text('id').primaryKey().notNull(),
 
 	userId: text('user_id')
 		.notNull()
 		.references(() => usersTable.id),
 
-	expiresAt: integer('expires_at').notNull()
+	expiresAt: timestamp('expires_at', { mode: "date", precision: 6, withTimezone: true}).notNull()
 });
 
 export type UserInsertSchema = typeof usersTable.$inferInsert;

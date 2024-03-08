@@ -1,12 +1,9 @@
-import Database from 'better-sqlite3';
-import { drizzle } from 'drizzle-orm/vercel-postgres';
-import { sql } from '@vercel/postgres';
-import { migrate } from "drizzle-orm/postgres-js/migrator";
+import { migrate } from "drizzle-orm/vercel-postgres/migrator";
+import { db } from './auth.server'
 
-// const sqliteClient = new Database('localDB/sqlite.db');
 
-export const database = drizzle(sql);
+async function main() {
+await migrate(db, { migrationsFolder: "drizzleMigrations" });
+}
 
-await migrate(database, { migrationsFolder: "drizzleMigrations" });
-
-await sql.end();
+main()

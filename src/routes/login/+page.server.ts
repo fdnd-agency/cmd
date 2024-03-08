@@ -8,7 +8,7 @@ import { zod } from 'sveltekit-superforms/adapters';
 
 import { deleteSessionCookie } from '$lib/database/authUtils.server';
 import { createAndSetSession } from '$lib/database/authUtils.server';
-import { database } from '$lib/database/database.server';
+import { db } from '$lib/database/auth.server';
 import { lucia } from '$lib/database/auth.server';
 import { usersTable } from '$lib/database/schema';
 import type { AlertMessageType } from '$lib/types';
@@ -45,7 +45,7 @@ export const actions: Actions = {
 			});
 		}
 
-		const [existingUser] = await database
+		const [existingUser] = await db
 			.select({
 				id: usersTable.id,
 				password: usersTable.password

@@ -15,8 +15,10 @@ import { logError } from '$lib/utils/index';
 // import { DASHBOARD_ROUTE } from '$lib/utils/navLinks';
 import { RegisterUserZodSchema } from '$lib/validations/AuthZodSchemas';
 
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 export const load = (async () => {
-    console.log(zod(RegisterUserZodSchema))
 	return {
 		registerUserFormData: await superValidate(zod(RegisterUserZodSchema))
 	};

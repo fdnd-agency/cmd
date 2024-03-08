@@ -1,12 +1,47 @@
 {
   "version": "5",
-  "dialect": "sqlite",
+  "dialect": "pg",
   "entries": [
     {
       "idx": 0,
       "version": "5",
-      "when": 1709550112496,
-      "tag": "0000_flimsy_mattie_franklin",
+      "when": 1709890402332,
+      "tag": "0000_concerned_fixer",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1709901560143,
+      "tag": "0001_thankful_human_robot",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1709901961772,
+      "tag": "0002_tired_nocturne",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1709902072885,
+      "tag": "0003_supreme_sally_floyd",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1709902498213,
+      "tag": "0004_chubby_stryfe",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1709903544700,
+      "tag": "0005_brief_thanos",
       "breakpoints": true
     }
   ]

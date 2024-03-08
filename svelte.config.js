@@ -16,7 +16,8 @@ const config = {
 		alias: {
 			$assets: 'src/lib/assets',
 			$components: 'src/lib/components',
-			$validations: 'src/lib/validations'
+			$validations: 'src/lib/validations',
+			$lib: 'src/lib'
 		},
 
 		// remove this if you don't want prerendering
