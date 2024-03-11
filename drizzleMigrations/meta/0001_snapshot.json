@@ -1,6 +1,6 @@
 {
-  "id": "c82a77c2-45c7-474a-a922-589006471dec",
-  "prevId": "0b377b71-ad6c-41ef-92a4-5c3308932513",
+  "id": "e6f78405-2b6a-4cd3-9fa4-73a2b82fa35d",
+  "prevId": "9057aea6-15f2-453e-9e58-214daab576dc",
   "version": "5",
   "dialect": "pg",
   "tables": {
@@ -22,7 +22,7 @@
         },
         "expires_at": {
           "name": "expires_at",
-          "type": "timestamp",
+          "type": "timestamp (6) with time zone",
           "primaryKey": false,
           "notNull": true
         }
@@ -32,15 +32,15 @@
         "users_sessions_user_id_users_id_fk": {
           "name": "users_sessions_user_id_users_id_fk",
           "tableFrom": "users_sessions",
-          "tableTo": "users",
           "columnsFrom": [
             "user_id"
           ],
+          "tableTo": "users",
           "columnsTo": [
             "id"
           ],
-          "onDelete": "no action",
-          "onUpdate": "no action"
+          "onUpdate": "no action",
+          "onDelete": "no action"
         }
       },
       "compositePrimaryKeys": {},
@@ -88,10 +88,10 @@
       "uniqueConstraints": {
         "users_email_unique": {
           "name": "users_email_unique",
-          "nullsNotDistinct": false,
           "columns": [
             "email"
-          ]
+          ],
+          "nullsNotDistinct": false
         }
       }
     }

@@ -21,7 +21,7 @@ export const usersSessionsTable = pgTable('users_sessions', {
 		.notNull()
 		.references(() => usersTable.id),
 
-	expiresAt: timestamp('expires_at', { mode: "date", precision: 6, withTimezone: true}).notNull()
+	expiresAt: timestamp('expires_at').notNull()
 });
 
 export type UserInsertSchema = typeof usersTable.$inferInsert;

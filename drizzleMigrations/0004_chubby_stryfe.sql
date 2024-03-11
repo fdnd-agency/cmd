@@ -1,1 +1,0 @@
-ALTER TABLE "users_sessions" ALTER COLUMN "expires_at" TYPE timestamp with time zone USING "expires_at"::timestamp with time zone;;

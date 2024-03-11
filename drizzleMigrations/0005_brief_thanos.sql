@@ -1,1 +1,0 @@
-ALTER TABLE "users_sessions" ALTER COLUMN "expires_at" SET DATA TYPE timestamp(6) with time zone;

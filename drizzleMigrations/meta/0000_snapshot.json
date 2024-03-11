@@ -1,5 +1,5 @@
 {
-  "id": "0b377b71-ad6c-41ef-92a4-5c3308932513",
+  "id": "9057aea6-15f2-453e-9e58-214daab576dc",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "5",
   "dialect": "pg",
@@ -22,7 +22,7 @@
         },
         "expires_at": {
           "name": "expires_at",
-          "type": "integer",
+          "type": "timestamp (6) with time zone",
           "primaryKey": false,
           "notNull": true
         }
