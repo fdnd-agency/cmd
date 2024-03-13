@@ -11,7 +11,7 @@
 
   import InputField from "$lib/atoms/inputfields/SuperValidInput.svelte";
   import SuperValidButton from "$lib/atoms/SuperValidButton.svelte";
-  import LinkButton from "$lib/atoms/linkButton.svelte";
+  import LinkButton from "$lib/atoms/LinkButton.svelte";
 
   import { route } from "$lib/ROUTES";
   import type { PageData } from "./$types";
