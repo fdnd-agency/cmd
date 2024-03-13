@@ -26,8 +26,7 @@
     }
 
     input:focus {
-        outline: var(--btn-focus, var(--color-hva-pink)) dashed 2px;
-        
+        outline: var(--btn-focus, var(--color-hva-pink)) dashed 2px; 
     }
 
     input:user-invalid {

@@ -1,4 +1,7 @@
+<script>
+		import LogoutButton from '$lib/atoms/logout/logout.svelte';
 
+</script>
 
 <nav>
 	<!-- Mobiele menu voor kleine schermen -->
@@ -138,6 +141,11 @@
 
 	<!-- Het desktop menu voor grotere schermen -->
 	<ul class="desktop-menu" role="menu" tabindex="0">
+		<div class="logout-button">
+		<LogoutButton></LogoutButton>
+		</div>
+		<li>
+		<ul class="button-grouper">
 		<li role="menuitem">
 			<button id="filterSearchDesktop" class="filterSearch"aria-expanded="false" type="button">
 				<svg
@@ -165,6 +173,7 @@
 				filteren & zoeken
 			</button>
 		</li>
+
 		<li role="menuitem">
 			<a class="link-primary" href="/upload">
 				<svg
@@ -206,6 +215,9 @@
 				upload een werkvorm
 			</a>
 		</li>
+		
+	</ul>
+	</li>
 	</ul>
 </nav>
 
@@ -220,6 +232,15 @@ details {
     cursor: pointer;
 }
 
+.button-grouper{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.logout-button{
+	margin-top: calc(var(--unit-large) * -1);
+	margin-left: var(--unit-default)
+}
 summary {
     border: 2px solid var(--color-hva-blue-secundary);
     /* Enhanced kleur binnen @supports */
@@ -255,7 +276,7 @@ nav {
     margin: 0;
     padding: var(--unit-small);
     text-transform: capitalize;
-    width: 100%;
+    width: 100%;	
 }
 
 nav .mobile-menu {
@@ -503,7 +524,7 @@ ul.desktop-menu a {
         align-items: center;
         display: flex;
         gap: var(--unit-large);
-        justify-content: end;
+	justify-content: space-between;
     }
 }
 

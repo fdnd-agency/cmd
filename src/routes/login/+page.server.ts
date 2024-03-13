@@ -1,5 +1,5 @@
 import { redirect } from '@sveltejs/kit';
-import type { Actions, PageServerLoad } from './$types';
+import type { Actions, PageServerLoad } from '$lib/types';
 
 import { eq } from 'drizzle-orm';
 import { Argon2id } from 'oslo/password';

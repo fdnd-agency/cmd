@@ -5,12 +5,11 @@
 
 	import Button from '$lib/atoms/specialButton/button.svelte';
 
-	let className: HTMLButtonAttributes['class'] = undefined;
 
-	export { className as class };
 	export let disabled: boolean = false;
 	export let formaction: string | null = null;
 	export let showSpinner: boolean | null = null;
+	export let className: string = '';
 </script>
 
 <Button
@@ -28,3 +27,4 @@
 		<slot>Submit</slot>
 	</span>
 </Button>
+

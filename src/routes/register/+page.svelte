@@ -38,9 +38,11 @@
 	});
 </script>
 
-<h1 class="mb-6 text-2xl font-bold leading-none">Register</h1>
+<main>
 
-<form method="post" use:enhance class="space-y-4" action={route('registerUser /register')}>
+<form method="post" use:enhance action={route('registerUser /register')}>
+	<section>
+	<h1>Register</h1>
 	<InputField
 		type="text"
 		name="name"
@@ -48,6 +50,7 @@
 		bind:value={$form.name}
 		errorMessage={$errors.name}
 		maxlength={MAX_NAME_LENGTH}
+		iconSrc="/images/icons/user.svg"
 	/>
 
 	<InputField
@@ -57,6 +60,7 @@
 		bind:value={$form.email}
 		errorMessage={$errors.email}
 		maxlength={MAX_EMAIL_LENGTH}
+		iconSrc="/images/icons/email.svg"
 	/>
 
 	<InputField
@@ -66,7 +70,28 @@
 		bind:value={$form.password}
 		errorMessage={$errors.password}
 		maxlength={MAX_PASSWORD_LENGTH}
+		iconSrc="/images/icons/password.svg"
 	/>
+	</section>
 
 	<SuperValidButton></SuperValidButton>
 </form>
+
+</main>
+
+<style>
+		main{
+		display: flex;
+		justify-content: center;
+		align-content: center;
+	}
+  section {
+    display: flex;
+    flex-direction: column;
+    padding: var(--unit-large);
+    background: var(--form-bg, #1e1649);
+    row-gap: 0.3rem;
+    width: 20em;
+	
+  }
+</style>

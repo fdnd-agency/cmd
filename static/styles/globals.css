@@ -135,3 +135,31 @@ p {
 .javascriptEnabled #fullScreen {
     display: block;
 }
+
+[data-button-root] {
+    padding: 0.9rem 1.8rem 0.9rem 2.3rem;
+    border: none;
+    background-color: var(--btn-color, #1e1649);
+    color: var(--color-white, #ffffff);
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+  }
+
+  [data-button-root]:hover {
+    background-color: var(--btn-hover-bg, #362e61);
+}
+
+[data-button-root]:focus {
+    outline: var(--btn-focus, #f25379) solid 2px;
+}
+
+@media (min-width: 170rem) {
+    [data-button-root]{
+        font-size: 150%;
+        height: 150%;
+        width: 60%;
+    }
+
+}

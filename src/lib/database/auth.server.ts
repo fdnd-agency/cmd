@@ -1,4 +1,4 @@
-// import { dev } from '$app/environment';
+import { dev } from '$app/environment';
 
 import { DrizzlePostgreSQLAdapter } from "@lucia-auth/adapter-drizzle";
 import { sql } from '@vercel/postgres';
@@ -16,7 +16,7 @@ const dbAdapter = new DrizzlePostgreSQLAdapter(db, usersSessionsTable, usersTabl
 export const lucia = new Lucia(dbAdapter, {
 	sessionCookie: {
 		attributes: {
-			// secure: !dev
+			secure: !dev
 		}	
 	},
 

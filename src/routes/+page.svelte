@@ -8,7 +8,6 @@
 	import FullScreenButton from '$lib/molecules/FullScreenButton.svelte';
 	import IntroSection from '$lib/organisms/introSection.svelte';
 	import { selectedTag } from '$lib/utils/tagstore.js';
-	import LogoutButton from '$lib/atoms/logout/logout.svelte';
 	/* ----------------------------- TRISTAN ATTEMPT ---------------------------- */
 
 	
@@ -72,7 +71,6 @@
 	<IntroSection />
 
 	<Nav></Nav>
-	<LogoutButton></LogoutButton>
 	<NavFilterList {data} {searchInput} />
 	<!-- als selectedtags niet op alletags staat dan wordt er weergeven hoeveel werkvormen er zijn gevonden -->
 	<section class="gevonden-werkvormen">
