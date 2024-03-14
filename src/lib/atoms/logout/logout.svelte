@@ -9,5 +9,5 @@
 </script>
 
 <form method="post" action={route('logout /login')}>
-    <SuperValidButton>Logout</SuperValidButton>
+    <SuperValidButton>Log uit</SuperValidButton>
 </form>

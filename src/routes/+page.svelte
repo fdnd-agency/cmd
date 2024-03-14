@@ -70,7 +70,7 @@
 <main>
 	<IntroSection />
 
-	<Nav></Nav>
+	<Nav {data} ></Nav>
 	<NavFilterList {data} {searchInput} />
 	<!-- als selectedtags niet op alletags staat dan wordt er weergeven hoeveel werkvormen er zijn gevonden -->
 	<section class="gevonden-werkvormen">

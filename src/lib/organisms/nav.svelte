@@ -1,6 +1,17 @@
 <script>
 		import LogoutButton from '$lib/atoms/logout/logout.svelte';
+		import { onMount } from 'svelte';
 
+		onMount(async () => {
+			console.log(data)
+			let logoutAppear = document.querySelector(".logout-button")
+			if(data.user){
+				logoutAppear.classList.add('appear')
+
+			}
+		return ;
+	});	
+		export let data;
 </script>
 
 <nav>
@@ -142,6 +153,7 @@
 	<!-- Het desktop menu voor grotere schermen -->
 	<ul class="desktop-menu" role="menu" tabindex="0">
 		<div class="logout-button">
+			<span class="appear"></span>
 		<LogoutButton></LogoutButton>
 		</div>
 		<li>
@@ -239,7 +251,12 @@ details {
 
 .logout-button{
 	margin-top: calc(var(--unit-large) * -1);
-	margin-left: var(--unit-default)
+	margin-left: var(--unit-default);
+	visibility: hidden;
+
+}
+.appear{
+	visibility: visible;
 }
 summary {
     border: 2px solid var(--color-hva-blue-secundary);

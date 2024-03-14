@@ -20,7 +20,7 @@ export const actions: Actions = {
 };
 
 // Fetch data from Directus
-export async function load() {
+export async function load(event) {
 	// Get all data from seperate collections
 	const reqWorkform = await fetch(
 		'https://platform-big-themes.directus.app/items/workform?fields=*.*.*'
@@ -32,12 +32,14 @@ export async function load() {
 	const dataCourse = await reqCourse.json();
 	const dataContact = await reqContact.json();
 	const dataTag = await reqTag.json();
+	const user = event.locals.user;
 
 	const data = {
 		workform: dataWorkform.data,
 		course: dataCourse.data,
 		contact: dataContact.data,
-		tag: dataTag.data
+		tag: dataTag.data,
+		user: user
 	};
 
 	return data;

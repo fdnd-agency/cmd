@@ -68,7 +68,7 @@ export const actions: Actions = {
 
 		await createAndSetSession(lucia, existingUser.id, cookies);
 
-		throw redirect(303, "/");
+		throw redirect(303, "/upload");
 	}
 };
 

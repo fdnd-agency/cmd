@@ -42,7 +42,7 @@
 
 <form method="post" use:enhance action={route('registerUser /register')}>
 	<section>
-	<h1>Register</h1>
+	<h1>Registreer</h1>
 	<InputField
 		type="text"
 		name="name"
