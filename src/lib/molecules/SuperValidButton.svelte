@@ -1,10 +1,5 @@
 <script lang="ts">
-	import type { HTMLButtonAttributes } from 'svelte/elements';
-
-	// import { cn } from '$lib/utils/styleTransitionUtils';
-
-	import Button from '$lib/atoms/specialButton/button.svelte';
-
+	import Button from '$lib/molecules/specialButton/button.svelte';
 
 	export let disabled: boolean = false;
 	export let formaction: string | null = null;

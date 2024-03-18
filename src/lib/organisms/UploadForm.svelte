@@ -7,12 +7,16 @@
   import FileFormField from "$lib/molecules/FileFormField.svelte";
   import Button from "$lib/atoms/Button.svelte";
   import LimitedFormField from "../molecules/LimitedFormField.svelte";
+  import AccessValidator from "../molecules/AccessValidator.svelte";
+  import { listValidatorClass } from '$lib/utils/tagstore.js';
 
   export let formAction;
   export let formMethod;
   export let btnText;
   export let data;
-  export let newValidator = new Array();
+  let listValidator;
+  let newValidator = new Array();
+  let validatorHidden = true;
 
   data = data.data;
   console.log(data)
@@ -52,12 +56,14 @@
 
   function isEmpty(element, index, array) {
         return element === " ";
-      }
+  }
 
+function toggleValidator() {
+  validatorHidden = false;
+}
   onMount(async () => {
     let errorStandard = document.querySelectorAll("input, select");
     let labelStandard = document.querySelectorAll("label");
-    let listValidator = document.querySelector(".validator");
     let submitButton = document.querySelector("button");
     let removed = false;
 
@@ -84,7 +90,7 @@
             }
 
             if (newValidator.every(isEmpty)) {
-              listValidator.classList.toggle("validator-hidden");
+              validatorHidden = true;
             }
           } else if (errorStandard[i].validity.valueMissing == true) {
             errorStandard[i].setCustomValidity(
@@ -98,25 +104,15 @@
           } else {
             errorStandard[i].setCustomValidity("");
           }
-          // if(newValidator[i].includes(" ")){
-          //         newValidator.splice(i, 1);
-          // }
         });
       });
     }
-    submitButton.addEventListener("click", () => {
-      if (listValidator.classList.contains("validator-hidden")) {
-        listValidator.classList.toggle("validator-hidden");
-      }
-    });
+    console.log(listValidator)
+
   });
 </script>
 
-<ul class="validator-hidden validator">
-  {#each newValidator as newValidators}
-    <li>{newValidators}</li>
-  {/each}
-</ul>
+<AccessValidator bind:this={listValidator} {newValidator} {validatorHidden}/>
 <form
   action={formAction}
   method={formMethod}
@@ -221,7 +217,7 @@
     />
   </div>
 
-  <Button btnType="submit" {btnText}></Button>
+  <Button btnType="submit" {btnText} on:click= {toggleValidator}></Button>
 </form>
 
 <!-- After upload message -->
@@ -231,15 +227,6 @@
 </article>
 
 <style>
-  .validator-hidden {
-    display: none;
-  }
-  .validator {
-    row-gap: var(--unit-small);
-    padding: var(--unit-large) var(--unit-large);
-    background: var(--color-hva-navy);
-    height: 30vh;
-  }
   form {
     display: none;
     flex-direction: column;

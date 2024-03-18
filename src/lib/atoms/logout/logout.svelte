@@ -3,7 +3,7 @@
 
 	import { route } from '$lib/ROUTES';
 
-	import SuperValidButton from '$lib/atoms/SuperValidButton.svelte';
+	import SuperValidButton from '$lib/molecules/SuperValidButton.svelte';
 
 	export let data: PageData;
 </script>

@@ -7,7 +7,7 @@
 	<div class="icon-box">
 		<img src="/images/icons/arrow-right.svg" alt="" />
 	</div>
-	<button type={btnType}>{btnText}</button>
+	<button type={btnType} on:click>{btnText}</button>
 </div>
 
 <style>
@@ -59,11 +59,7 @@
 	.submit-button:has(button:hover) .icon-box {
 		transform: scale(1.5);
 	}
-
-	button:focus {
-		outline: var(--btn-focus, #f25379) solid 2px;
-	}
-
+	
 	@media (min-width: 170rem) {
         button{
             font-size: 150%;

@@ -12,8 +12,8 @@
 		RegisterUserZodSchema
 	} from '$lib/validations/AuthZodSchemas';
 
-	import InputField from '$lib/atoms/inputfields/SuperValidInput.svelte';
-	import SuperValidButton from '$lib/atoms/SuperValidButton.svelte';
+	import InputField from '$lib/molecules/SuperValidInput.svelte';
+	import SuperValidButton from '$lib/molecules/SuperValidButton.svelte';
 
 	export let data;
 

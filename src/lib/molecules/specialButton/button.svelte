@@ -2,7 +2,8 @@
 	import { Button as ButtonPrimitive } from 'bits-ui';
 	// import { cn } from '$lib/utils/styleTransitionUtils';
 	import {type Props, type Events } from '.';
-
+	import Icon from '$lib/atoms/Icon.svelte'
+	
 	type $$Props = Props;
 	type $$Events = Events;
 
@@ -10,11 +11,11 @@
 
 	export let builders: $$Props['builders'] = [];
 	export { className as class };
-</script>
+</script>	
 
 <div class="submit-button">
 	<div class="icon-box">
-		<img src="/images/icons/arrow-right.svg" alt="" />
+		<Icon iconSrc="/images/icons/arrow-right.svg" --icon-width="1.4rem"></Icon>
 	</div>
 	<ButtonPrimitive.Root
 	{builders}

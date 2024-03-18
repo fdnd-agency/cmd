@@ -16,3 +16,10 @@ export const setTag = (tag) => {
 selectedTag.subscribe((value) => {
 	console.log('Selected Tag:', value);
 });
+
+
+export const listValidatorClass = writable('validator-hidden');
+
+listValidatorClass.subscribe((value) => {
+	console.log('Selected class:', value);
+});
