@@ -80,7 +80,7 @@
 </main>
 
 <style>
-		main{
+	main{
 		display: flex;
 		justify-content: center;
 		align-content: center;

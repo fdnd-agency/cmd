@@ -3,6 +3,7 @@
 
 	export let data;
 	let workform = data.workform[0];
+	console.log(workform)
 </script>
 
 <svelte:head>
@@ -32,11 +33,25 @@
 		<!-- svelte-ignore a11y-media-has-caption -->
 		<!-- Check if a video is available, else display the thumbnail. -->
 		{#if workform.video == null}
+		{#if workform.thumbnail_performant}
 			<img
 				class="thumbnail"
-				src={'https://platform-big-themes.directus.app/assets/' + workform.thumbnail.id}
+				src={'https://platform-big-themes.directus.app/assets/' + workform.thumbnail_performant.id}
 				alt="{workform.alt}"
+				loading="lazy"
+				width={workform.thumbnail_performant.width}
+				height={workform.thumbnail_performant.height}
 			/>
+			{:else}
+			<img
+			class="thumbnail"
+			src={'https://platform-big-themes.directus.app/assets/' + workform.thumbnail.id}
+			alt="{workform.alt}"
+			loading="lazy"
+			width={workform.thumbnail.width}
+			height={workform.thumbnail.height}
+		/>
+			{/if}
 		{:else}
 			<video
 				controls
@@ -227,14 +242,16 @@
 	img {
 		width: 100%;
 		border-radius: 5px;
-		max-width: 28rem;
+		/* max-width: 28rem; */
 	}
 
 	.thumbnail {
-		width: 100%;
-		height: initial;
+		width: 30rem;
+		height: 15rem;
 		aspect-ratio: initial;
 		transform: initial;
+		margin: 1rem 0 1rem 0;
+
 	}
 
 	/* Layout content werkvorm */
@@ -306,6 +323,12 @@
             grid-template-areas:"a c"
                                 "b d";
         }
+		.thumbnail {
+			width: 35rem;
+			height: 20rem;
+			margin: 0;
+		}
+
 	}
 
 	@media (min-width: 1024px) {
@@ -320,6 +343,7 @@
 		video {
 			max-width: 40rem;
 		}
+
 
         section {
             display: grid;

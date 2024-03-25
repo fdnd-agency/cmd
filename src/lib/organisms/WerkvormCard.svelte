@@ -13,7 +13,25 @@
 		{/if}
 	</ul>
 
-	<img src={"https://platform-big-themes.directus.app/assets/" + workform.thumbnail.id} alt="{workform.alt}" width={workform.thumbnail.width} height={workform.thumbnail.height} />
+	{#if workform.thumbnail_performant}
+	<img
+		class="thumbnail"
+		src={'https://platform-big-themes.directus.app/assets/' + workform.thumbnail_performant.id}
+		alt="{workform.alt}"
+		width={workform.thumbnail.width} 
+		height={workform.thumbnail.height}
+		loading="lazy"
+	/>
+	{:else}
+	<img
+	class="thumbnail"
+	src={'https://platform-big-themes.directus.app/assets/' + workform.thumbnail.id}
+	alt="{workform.alt}"
+	width={workform.thumbnail.width} 
+	height={workform.thumbnail.height}
+	loading="lazy"
+	/>
+	{/if}
 	<div>
 		<div>
 			<h2>{workform.title}</h2>

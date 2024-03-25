@@ -5,7 +5,6 @@ export const createAndSetSession = async (lucia: Lucia, userId: string, cookies:
 	const session = await lucia.createSession(userId, {});
 	const sessionCookie = lucia.createSessionCookie(session.id);
 
-	
 	cookies.set(sessionCookie.name, sessionCookie.value, {
 		path: '.',
 		...sessionCookie.attributes
