@@ -3,13 +3,14 @@
 	import Nav from '$lib/organisms/nav.svelte';
 	import { page } from '$app/stores';
 
-	import WerkvormCard from '../lib/organisms/WerkvormCard.svelte';
-	import NavFilterList from '../lib/atoms/NavFilterList.svelte';
-	import FullScreenButton from '../lib/molecules/FullScreenButton.svelte';
-	import IntroSection from '../lib/organisms/introSection.svelte';
-	import { selectedTag } from '../lib/Utils/tagStore';
-
+	import WerkvormCard from '$lib/organisms/WerkvormCard.svelte';
+	import NavFilterList from '$lib/atoms/NavFilterList.svelte';
+	import FullScreenButton from '$lib/molecules/FullScreenButton.svelte';
+	import IntroSection from '$lib/organisms/introSection.svelte';
+	import { selectedTag } from '$lib/utils/tagstore.js';
 	/* ----------------------------- TRISTAN ATTEMPT ---------------------------- */
+
+	
 	$: filteredWorkforms = [];
 
 	$: {
@@ -41,7 +42,7 @@
 	onMount(async () => {
 		document.documentElement.classList.add('javascriptEnabled');
 
-		const filterSearchButtons = document.querySelectorAll('#filterSearch');
+		const filterSearchButtons = document.querySelectorAll('.filterSearch');
 
 		filterSearchButtons.forEach((filterSearchButton) => {
 			const filterMegaMenu = document.querySelector('#mega-menu');
@@ -65,8 +66,7 @@
 <main>
 	<IntroSection />
 
-	<Nav></Nav>
-
+	<Nav {data} ></Nav>
 	<NavFilterList {data} {searchInput} />
 	<!-- als selectedtags niet op alletags staat dan wordt er weergeven hoeveel werkvormen er zijn gevonden -->
 	<section class="gevonden-werkvormen">
@@ -115,6 +115,13 @@
 		transition: var(--animation-default) ease-in-out;
 	}
 
+	@media (max-width: 18rem) {
+		.werkvormen {
+			width: 16rem;
+			justify-content: center;
+		}
+	}
+
 	@media (min-width: 46rem) {
 		.werkvormen {
 			width: 42rem;
@@ -132,6 +139,14 @@
 	@media (min-width: 70rem) {
 		.werkvormen {
 			width: 64rem;
+		}
+	}
+
+	@media (min-width: 170rem){
+		.werkvormen{
+			width: 90vw;
+			justify-content: center;
+			height: 50vh;
 		}
 	}
 </style>

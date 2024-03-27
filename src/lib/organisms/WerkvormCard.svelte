@@ -13,7 +13,25 @@
 		{/if}
 	</ul>
 
-	<img src={"https://platform-big-themes.directus.app/assets/" + workform.thumbnail.id} alt="" width={workform.thumbnail.width} height={workform.thumbnail.height} />
+	{#if workform.thumbnail_performant}
+	<img
+		class="thumbnail"
+		src={'https://platform-big-themes.directus.app/assets/' + workform.thumbnail_performant.id}
+		alt="{workform.alt}"
+		width={workform.thumbnail.width} 
+		height={workform.thumbnail.height}
+		loading="lazy"
+	/>
+	{:else}
+	<img
+	class="thumbnail"
+	src={'https://platform-big-themes.directus.app/assets/' + workform.thumbnail.id}
+	alt="{workform.alt}"
+	width={workform.thumbnail.width} 
+	height={workform.thumbnail.height}
+	loading="lazy"
+	/>
+	{/if}
 	<div>
 		<div>
 			<h2>{workform.title}</h2>
@@ -23,7 +41,7 @@
 				<p>Geen beschrijving beschikbaar.</p>
 			{/if}
 		</div>
-		<a href={workform.link}><img src="images/icons/arrow-right.svg" alt="" />Bekijk werkvorm</a>
+		<a href={workform.link}><img src="images/icons/arrow-right.svg" alt="pijl die naar rechts wijst" />Bekijk werkvorm</a>
 	</div>
 </article>
 
@@ -114,4 +132,23 @@
 		font-size: 0.8rem;
 		font-weight: 500;
 	}
+
+	@media (min-width: 170rem){
+		p, h2, a, li{
+			font-size: 150%;
+		}
+	}
+
+	@media (max-width: 18rem) {
+		article {
+			min-width: 15rem;
+			width: 15rem;
+		}
+	}
+
+	@media (prefers-reduced-motion) {
+		article:hover a {
+		transform: translateX(0);
+	}
+    }
 </style>

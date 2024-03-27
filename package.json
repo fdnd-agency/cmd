@@ -7,18 +7,49 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"db:generate": "drizzle-kit generate:pg --config=drizzle-config.ts",
+		"db:push": "drizzle-kit push:pg --config=drizzle-config.ts",
+		"db:pull": "drizzle-kit introspect:pg --config=drizzle-config.ts",
+		"db:drop": "drizzle-kit drop --config=drizzle-config.ts",
+		"db:check": "drizzle-kit check:pg --config=drizzle-config.ts",
+		"db:studio": "drizzle-kit studio --config=drizzle-config.ts"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.27.4",
+		"drizzle-kit": "^0.20.14",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-svelte": "^2.30.0",
 		"prettier": "^3.0.0",
 		"prettier-plugin-svelte": "^3.0.0",
 		"svelte": "^4.2.7",
-		"vite": "^4.4.2"
+		"sveltekit-flash-message": "^2.4.2",
+		"sveltekit-superforms": "^2.7.0",
+		"tsx": "^4.7.1",
+		"vite": "^4.4.2",
+		"vite-plugin-kit-routes": "^0.5.2",
+		"zod": "^3.22.4"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@auth/core": "^0.27.0",
+		"@auth/sveltekit": "^0.13.0",
+		"@lucia-auth/adapter-drizzle": "^1.0.2",
+		"@lucia-auth/adapter-postgresql": "^3.1.0",
+		"@tsndr/cloudflare-worker-jwt": "^2.5.1",
+		"@vercel/postgres": "^0.7.2",
+		"better-sqlite3": "^9.4.3",
+		"bits-ui": "^0.19.3",
+		"dotenv": "^16.4.5",
+		"drizzle-orm": "^0.29.4",
+		"drizzle-zod": "^0.5.1",
+		"lucia-auth": "^1.8.0",
+		"nodemailer": "^6.9.11",
+		"oslo": "^1.1.3",
+		"pg": "^8.11.3",
+		"svelte-meta-tags": "^3.1.1",
+		"svelte-preprocess": "^5.1.3"
+	}
 }

@@ -1,4 +1,18 @@
+<script>
+		import LogoutButton from '$lib/atoms/logout/logout.svelte';
+		import { onMount } from 'svelte';
 
+		onMount(async () => {
+			console.log(data)
+			let logoutAppear = document.querySelector(".logout-button")
+			if(data.user){
+				logoutAppear.classList.add('appear')
+
+			}
+		return ;
+	});	
+		export let data;
+</script>
 
 <nav>
 	<!-- Mobiele menu voor kleine schermen -->
@@ -72,7 +86,7 @@
 			</summary>
 			<ul id="mobile-menu">
 				<li class="menu-item">
-					<button id="filterSearch" aria-expanded="false" aria-controls="mega-menu" type="button">
+					<button id="filterSearchMobile" class="filterSearch" aria-expanded="false" aria-controls="mega-menu" type="button">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							class="icon icon-tabler icon-tabler-filter"
@@ -138,8 +152,14 @@
 
 	<!-- Het desktop menu voor grotere schermen -->
 	<ul class="desktop-menu" role="menu" tabindex="0">
+		<div class="logout-button">
+			<span class="appear"></span>
+		<LogoutButton></LogoutButton>
+		</div>
 		<li>
-			<button id="filterSearch" aria-expanded="false" type="button">
+		<ul class="button-grouper">
+		<li role="menuitem">
+			<button id="filterSearchDesktop" class="filterSearch"aria-expanded="false" type="button">
 				<svg
 					width="24"
 					height="24"
@@ -165,7 +185,8 @@
 				filteren & zoeken
 			</button>
 		</li>
-		<li>
+
+		<li role="menuitem">
 			<a class="link-primary" href="/upload">
 				<svg
 					width="24"
@@ -206,6 +227,9 @@
 				upload een werkvorm
 			</a>
 		</li>
+		
+	</ul>
+	</li>
 	</ul>
 </nav>
 
@@ -220,6 +244,20 @@ details {
     cursor: pointer;
 }
 
+.button-grouper{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.logout-button{
+	margin-top: calc(var(--unit-large) * -1);
+	margin-left: var(--unit-default);
+	visibility: hidden;
+
+}
+.appear{
+	visibility: visible;
+}
 summary {
     border: 2px solid var(--color-hva-blue-secundary);
     /* Enhanced kleur binnen @supports */
@@ -255,7 +293,7 @@ nav {
     margin: 0;
     padding: var(--unit-small);
     text-transform: capitalize;
-    width: 100%;
+    width: 100%;	
 }
 
 nav .mobile-menu {
@@ -426,6 +464,7 @@ nav .menu-item button {
 nav a:hover,
 ul li button:hover {
     background-color: var(--color-hva-pink);
+	color: black;
     /* Enhanced kleur binnen @supports */
     @supports (--css: variables) {
         background-color: var(--color-hva-pink-enhanced);
@@ -446,7 +485,7 @@ ul li button:focus {
 /* Primaire ruisknop */
 .link-primary {
     align-items: center;
-    background: oklch(0.54 0.28 278.48);
+    background: var(--color-hva-pink-enhanced);
     border-radius: var(--unit-micro);
     display: flex;
     gap: var(--unit-small);
@@ -471,7 +510,7 @@ ul li button:focus {
     background: var(--color-hva-pink);
     /* Enhanced kleur binnen @supports */
     @supports (--css: variables) {
-        background: var(--color-hva-pink-enhanced);
+        background: var(--color-hva-yellow-contrast);
     }
 }
 
@@ -502,8 +541,18 @@ ul.desktop-menu a {
         align-items: center;
         display: flex;
         gap: var(--unit-large);
-        justify-content: end;
+	justify-content: space-between;
     }
+}
+
+@media (min-width: 170rem) {
+    button, a{
+		font-size: 200% !important;
+	}
+
+	.desktop-menu{
+		height: 4rem;
+	}
 }
 
 </style>

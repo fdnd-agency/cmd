@@ -3,6 +3,7 @@
 
 	export let data;
 	let workform = data.workform[0];
+	console.log(workform)
 </script>
 
 <main>
@@ -28,15 +29,30 @@
 		<!-- svelte-ignore a11y-media-has-caption -->
 		<!-- Check if a video is available, else display the thumbnail. -->
 		{#if workform.video == null}
+		{#if workform.thumbnail_performant}
 			<img
 				class="thumbnail"
-				src={'https://platform-big-themes.directus.app/assets/' + workform.thumbnail.id}
-				alt="Thumbnail"
+				src={'https://platform-big-themes.directus.app/assets/' + workform.thumbnail_performant.id}
+				alt="{workform.alt}"
+				loading="lazy"
+				width={workform.thumbnail_performant.width}
+				height={workform.thumbnail_performant.height}
 			/>
+			{:else}
+			<img
+			class="thumbnail"
+			src={'https://platform-big-themes.directus.app/assets/' + workform.thumbnail.id}
+			alt="{workform.alt}"
+			loading="lazy"
+			width={workform.thumbnail.width}
+			height={workform.thumbnail.height}
+		/>
+			{/if}
 		{:else}
 			<video
 				controls
 				poster={'https://platform-big-themes.directus.app/assets/' + workform.thumbnail.id}
+				alt={workform.alt}
                 width="480" height="480"
 			>
 				<source
@@ -73,7 +89,7 @@
 			</div>
 
 			<div class="tags">
-				<h2>Tags</h2>
+				<h3>Tags</h3>
 				<div class="tag-list">
 					{#if workform.tags.length > 0}
 						{#each workform.tags as tag}
@@ -91,20 +107,7 @@
 				<div class="action-buttons">
 					<div class="action-button">
 						<div class="icon-box">
-							<svg
-								width="22"
-								height="23"
-								viewBox="0 0 22 23"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									fill-rule="evenodd"
-									clip-rule="evenodd"
-									d="M0.862464 12.2897C0.269712 11.711 0.25835 10.7613 0.837086 10.1685L10.2681 0.50906C10.8469 -0.0836926 11.7966 -0.0950548 12.3893 0.483682C12.9821 1.06242 12.9934 2.0121 12.4147 2.60485L5.51348 9.6732L19.9823 9.50009C20.8106 9.49018 21.4902 10.1537 21.5001 10.982C21.51 11.8104 20.8465 12.49 20.0181 12.4999L5.54937 12.673L12.6177 19.5742C13.2105 20.1529 13.2218 21.1026 12.6431 21.6954C12.0644 22.2881 11.1147 22.2995 10.5219 21.7207L0.862464 12.2897Z"
-									fill="white"
-								/>
-							</svg>
+							<img src="/images/icons/action-icon.svg" alt="Action icon" />
 						</div>
 						<a href="/">Terug naar overzicht</a>
 					</div>
@@ -121,6 +124,9 @@
 		color: white;
 		margin: 0;
 	}
+	*:focus {
+        outline: var(--btn-focus, var(--color-hva-pink)) dashed 2px;
+    }
 
 	main {
 		display: flex;
@@ -156,18 +162,19 @@
 		justify-content: center;
 		position: absolute;
 		left: 0rem;
-		background: var(--color-hva-pink);
-		/* Enhanced kleur binnen @supports */
-		@supports (--css: variables) {
-			background: var(--color-hva-pink-enhanced);
-		}
 		padding: var(--unit-small);
 		aspect-ratio: 1/1;
 		transform: rotate(45deg);
-		transition: transform var(--animation-quick) ease-in-out;
+		background: var(--color-hva-pink);
+		/* Enhanced kleur binnen @supports */
+		@supports (--css: variables) {
+			background: var(--color-hva-yellow-contrast);
+		}
 	}
 
-	.icon-box > svg,
+
+
+	.icon-box > object,
 	img {
 		width: var(--unit-default);
 		height: var(--unit-default);
@@ -184,18 +191,25 @@
 		font-weight: 600;
 		font-family: 'Open Sans', sans-serif;
 		cursor: pointer;
+		text-decoration: underline;
 	}
 
 	a.mail-to-link {
 		padding: 0;
 	}
 
-	a:hover {
+	.upload-button:hover, .action-button:hover {
 		background-color: unset;
+		transform: scale(1.05);
+		transition: transform var(--animation-quick) ease-in-out;
 	}
 
 	a.mail-to-link:hover {
 		opacity: 0.7;
+	}
+
+	a.mail-to-link:focus p {
+		border: var(--btn-focus, var(--color-hva-pink)) dashed 2px;
 	}
 
 	header {
@@ -224,14 +238,16 @@
 	img {
 		width: 100%;
 		border-radius: 5px;
-		max-width: 28rem;
+		/* max-width: 28rem; */
 	}
 
 	.thumbnail {
-		width: 100%;
-		height: initial;
+		width: 30rem;
+		height: 15rem;
 		aspect-ratio: initial;
 		transform: initial;
+		margin: 1rem 0 1rem 0;
+
 	}
 
 	/* Layout content werkvorm */
@@ -303,6 +319,12 @@
             grid-template-areas:"a c"
                                 "b d";
         }
+		.thumbnail {
+			width: 35rem;
+			height: 20rem;
+			margin: 0;
+		}
+
 	}
 
 	@media (min-width: 1024px) {
@@ -317,6 +339,7 @@
 		video {
 			max-width: 40rem;
 		}
+
 
         section {
             display: grid;
@@ -345,5 +368,36 @@
         .upload-button {
             grid-area: uploadbutton;
         }
+	}
+
+	@media (min-width: 160rem){
+		main{
+			height: 100vh;
+			font-size: 250%;
+			justify-content: center;
+		}
+		a, header > p, .single-tag{
+			font-size: 100%;
+		}
+
+		.single-tag{
+			border: 4px solid;
+		}
+		.upload-button, .action-button, .description, p{
+			max-width: 60rem;
+			text-wrap: balance;
+		}
+		h2, h1{
+			font-size: 150% !important;
+		}
+		img, video{
+			max-width: 65rem;
+			width: 100%;
+			height: 75%;
+			object-fit: cover;
+		}
+		section{
+			grid-auto-columns: 3fr 2fr;
+		}
 	}
 </style>

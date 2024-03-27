@@ -82,11 +82,12 @@ button {
     box-shadow: var(--unit-small) var(--unit-small) #1e1649;
     transition: var(--animation-default) ease-in-out;
     z-index: 5;
+    color: black;
 
     /* Enhanced kleuren binnen @supports */
     @supports (--css: variables) {
-        background-color: var(--color-hva-pink-enhanced);
-        border: 2px solid var(--color-hva-pink-enhanced);
+        background-color: var(--color-hva-yellow-contrast);
+        border: 2px solid var(--color-hva-yellow-contrast);
     }
 }
 
@@ -106,13 +107,14 @@ button figure figcaption {
 
 /* Interactive states */
 button:hover {
-    background-color: var(--color-hva-blue-secundary);
-    border: 2px solid var(--color-hva-blue-secundary);
+    background-color: var(--color-hva-pink);
+    border: 2px solid var(--color-hva-pink);
+    color: white;
 
     /* Enhanced kleuren binnen @supports */
     @supports (--css: variables) {
-        background-color: var(--color-hva-blue-secundary-enhanced);
-        border: 2px solid var(--color-hva-blue-secundary-enhanced);
+        background-color: var(--color-hva-pink-enhanced);
+        border: 2px solid var(--color-hva-pink-enhanced);
     }
 
     box-shadow: 0px 0px #1e1649;
@@ -142,6 +144,17 @@ button:focus {
     button figure figcaption {
         visibility: visible;
         width: fit-content;
+    }
+}
+
+@media (min-width: 170rem) {
+    button {
+      width: 16rem;
+      height: 5rem;
+    }
+
+    button figure figcaption {
+      font-size: 150%;   
     }
 }
 

@@ -25,7 +25,7 @@
     <div>
         <div class="header-wrapper">
             <a href="/">
-                <img src="/images/logo.svg" alt="Hogeschool van Amsterdam" width="128" height="28" />
+                <img src="/images/logo.svg" alt="Hogeschool van Amsterdam logo" width="128" height="28" />
             </a>
 
             <span>Werkvormen Grote Thema's</span>
@@ -78,6 +78,10 @@ a {
     text-decoration: underline;
 }
 
+a:focus img, nav a:focus{
+    outline: var(--btn-focus, var(--color-hva-pink)) dashed 2px;
+}
+
 .nav-components {
     display: flex;
     flex-direction: row;
@@ -114,5 +118,23 @@ nav {
         font-size: var(--unit-large);
     }
 }
+@media (min-width: 170rem){
+
+		span{
+			font-size: 350%;
+		}
+
+        img:first-child{
+            max-width: 30rem;
+            width: 100%;
+            height: 10rem;
+        }
+        img{
+            width: 50%;
+        }
+        nav{
+            font-size: 200%;
+        }
+    }
 
 </style>

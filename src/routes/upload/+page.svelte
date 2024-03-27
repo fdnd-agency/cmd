@@ -87,4 +87,18 @@
             font-size: var(--unit-default);
         }
     }
+
+    @media (min-width: 160rem){
+        section{
+            gap: 4rem;
+        }
+
+        header h1 {
+            font-size: 4rem;
+        }
+
+        header > p {
+            font-size: 200%;
+        }
+    }
 </style>

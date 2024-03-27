@@ -16,6 +16,7 @@
         align-items: center;
         position: relative;
         padding-left: var(--unit-default);
+        margin-top: var(--unit-large);
     }
 
     .icon-box {

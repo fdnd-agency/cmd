@@ -7,7 +7,7 @@
 	<div class="icon-box">
 		<img src="/images/icons/arrow-right.svg" alt="" />
 	</div>
-	<button type={btnType}>{btnText}</button>
+	<button type={btnType} on:click>{btnText}</button>
 </div>
 
 <style>
@@ -31,7 +31,7 @@
 
 		/* Enhanced kleur binnen @supports */
 		@supports (--css: variables) {
-			background: var(--color-hva-pink-enhanced);
+			background: var(--color-hva-yellow-contrast);
 		}
 	}
 
@@ -59,8 +59,16 @@
 	.submit-button:has(button:hover) .icon-box {
 		transform: scale(1.5);
 	}
-
-	button:focus {
-		outline: var(--btn-focus, #f25379) solid 2px;
-	}
+	
+	@media (min-width: 170rem) {
+        button{
+            font-size: 150%;
+            height: 150%;
+			width: 60%;
+        }
+		.icon-box > img{
+			width: 2rem;
+			height: 2rem;
+		}
+    }
 </style>
