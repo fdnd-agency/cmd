@@ -68,7 +68,7 @@
 		</fieldset>
 	</form>
 	<ul class="header-tags">
-		<li><button
+		<li class="all-tags"><button
 			class:selected-tag={selectedTag === data.tag}
 			class:active-tag={$selectedTag === 'allTags'}
 			on:click={() => selectedTag.set('allTags')}>Alle tags</button
@@ -98,18 +98,6 @@
 		</li>	
 		{/each}
 	</ul>
-	<!-- secondaire rij met tags, uitgecomment wegens feedback -->
-	<!-- <section>
-		{#each data.tag as tag}
-			<button
-				class:selected-tag={selectedTag === tag.title}
-				style="border: 2px solid {tag.color};"
-				on:click={() => handleTagClick(tag.id)}
-			>
-				{tag.title}
-			</button>
-		{/each}
-	</section> -->
 </div>
 
 <style>
@@ -235,9 +223,8 @@
 		font-size: var(--unit-default);
 		background-color: transparent;
 		padding: 0.3rem var(--unit-small) 0.3rem var(--unit-small);
-	}
-	.tag button:focus-visible {
-		outline: solid 2px var(--color-hva-pink);
+		color: var(--color-white);
+		margin: var(--unit-small) var(--unit-small);
 	}
 
 	.header-tags .active-tag {
@@ -248,27 +235,16 @@
 		}
 	}
 
-	ul {
-		display: flex;
-		flex-direction: row;
-	}
-
-	ul button {
-		color: var(--color-white);
-		margin: var(--unit-small) var(--unit-small);
-	}
-
 	input[type=search]::-webkit-search-cancel-button {
 		display: none;
 	}
-
-	.button-grouper{
+	
+	.button-grouper, .all-tags{
 		display: flex;
 		flex-flow: column wrap;
 		align-content: center;
 		justify-content: center;
 		position: relative;
-		margin: 0em 5em 0em 5em;
 	}
 	
 	.sub-select{
@@ -283,7 +259,7 @@
     	right: 0;
     	margin-left: auto;
     	margin-right: auto;
-    	width: 13em;
+    	width: max-content;
 		padding: 10px;
 		z-index: 3;
 		box-shadow: 8px 8px #1e1649;
@@ -294,16 +270,28 @@
 		visibility: hidden;
 	}
 	.sub-select > label > span{
-		border: 1px solid var(--text-color);
+		border: 2px solid var(--text-color);
 		font-family: 'Open Sans', sans-serif;
+		padding: 0.2rem var(--unit-small);
 	}
 
 	.sub-select > label{
 		padding: 5px 0px 5px 0px;
 		margin: 5px 0px 5px 0px;
 	}
-	.sub-select > label > span{
-		padding: 5px 2px 5px 2px;
-	}
 
+	@media (max-width: 75rem) {
+
+		ul li{
+			width: 80%;
+		}
+		
+		ul button{
+			width: 100%;
+		}
+
+		.sub-select{
+			width: auto;
+		}
+	}
 </style>

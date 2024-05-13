@@ -1,10 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import IntersectionObserver from "svelte-intersection-observer";
-
 	export let workform
-
-
 	let node;
 </script>
 
@@ -48,18 +45,18 @@
 
 	
 </div>
-</IntersectionObserver>
-	<div>
+	</IntersectionObserver>
 		<div>
-			<h2>{workform.title}</h2>
-			{#if workform.shortDescription}
-				<p>{workform.shortDescription}</p>
-			{:else}
-				<p>Geen beschrijving beschikbaar.</p>
-			{/if}
+			<div>
+				<h2>{workform.title}</h2>
+				{#if workform.shortDescription}
+					<p>{workform.shortDescription}</p>
+				{:else}
+					<p>Geen beschrijving beschikbaar.</p>
+				{/if}
+			</div>
+				<a href={workform.link}><img src="images/icons/arrow-right.svg" alt="pijl die naar rechts wijst" />Bekijk werkvorm</a>
 		</div>
-		<a href={workform.link}><img src="images/icons/arrow-right.svg" alt="pijl die naar rechts wijst" />Bekijk werkvorm</a>
-	</div>
 </article>
 
 <style>
@@ -72,6 +69,7 @@
         min-width: 20rem;
 		max-width: 20rem;
 		padding: 0.8rem;
+		height: 25rem;
 	}
 
 	article > div > img {
@@ -97,6 +95,9 @@
 		font-size: 1.4rem;
 		font-weight: 700;
 		margin-bottom: var(--unit-small);
+		white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis; 
 	}
 
 	p {

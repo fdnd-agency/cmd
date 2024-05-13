@@ -2,6 +2,7 @@
 	import Icon from '$lib/atoms/Icon.svelte'
 	import Label from '$lib/atoms/Label.svelte'
     import SelectField from '$lib/atoms/inputfields/SelectField.svelte'
+	import InputHint from '../atoms/InputHint.svelte';
 
 	export let iconSrc
 	export let labelFor
@@ -11,6 +12,7 @@
 	export let selectPlaceholder;
 	export let options;
     export let isRequired;
+	export let inputHint
 </script>
 
 <div class="form-field">
@@ -20,6 +22,7 @@
 	</span>
 
 	<SelectField {selectName} {selectId} {selectPlaceholder} {options} {isRequired}></SelectField>
+	<InputHint {inputHint}></InputHint>
 </div>
 
 <style>

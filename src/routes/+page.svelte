@@ -116,7 +116,7 @@
 		transition: var(--animation-default) ease-in-out;
 	}
 
-	@media (max-width: 18rem) {
+	@media (max-width: 46rem) {
 		.werkvormen {
 			width: 16rem;
 			justify-content: center;
@@ -128,12 +128,7 @@
 			width: 42rem;
 			margin: var(--unit-large) auto 0;
 			padding-bottom: 5rem;
-		}
-	}
-
-	@media (min-width: 700px) {
-		main {
-			padding: 0 var(--unit-large);
+			justify-content: none;
 		}
 	}
 
@@ -146,7 +141,6 @@
 	@media (min-width: 170rem){
 		.werkvormen{
 			width: 90vw;
-			justify-content: center;
 			height: 50vh;
 		}
 	}

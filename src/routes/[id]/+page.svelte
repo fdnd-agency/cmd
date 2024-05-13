@@ -140,19 +140,12 @@
 		gap: var(--unit-large);
 	}
 
-	.workform-visual {
-		width: 100%;
-		height: auto;
-		aspect-ratio: 1/1;
-		transform: rotate(0deg);
-	}
-
 	.upload-button,
 	.action-button {
 		display: flex;
 		align-items: center;
 		position: relative;
-		margin: 0;
+		margin: 0 0 0 .5rem;
 		max-width: 27rem;
 	}
 
@@ -174,8 +167,7 @@
 
 
 
-	.icon-box > object,
-	img {
+	.icon-box > object, img {
 		width: var(--unit-default);
 		height: var(--unit-default);
 		aspect-ratio: 1/1;
@@ -246,7 +238,7 @@
 		height: 15rem;
 		aspect-ratio: initial;
 		transform: initial;
-		margin: 1rem 0 1rem 0;
+		margin: 1.5rem 0 1rem 0;
 
 	}
 
@@ -322,7 +314,10 @@
 		.thumbnail {
 			width: 35rem;
 			height: 20rem;
-			margin: 0;
+		}
+
+		.thumbnail, video{
+			margin: 0.5rem 0 0 0;
 		}
 
 	}
